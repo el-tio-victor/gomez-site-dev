@@ -1,0 +1,47 @@
+# --- Laravel Core ---
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+docker-compose.override.yml
+user.ini
+
+# --- Archivos de Base de Datos (si usas SQLite) ---
+/database/*.sqlite
+/database/*.sqlite-journal
+
+# --- Testing y Logs ---
+.phpunit.cache/
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/testing/*
+!/storage/framework/testing/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+
+# --- Editores e IDEs ---
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php
+.php-cs-fixer.cache
+
+# --- Sistema Operativo ---
+.DS_Store
+Thumbs.db

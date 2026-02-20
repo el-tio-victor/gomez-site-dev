@@ -1,0 +1,189 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/631690ad/
+App\\Http\\Controllers	ArticlesController.php	/^namespace App\\Http\\Controllers;$/;"	n
+App\\Http\\Controllers	CategoriesController.php	/^namespace App\\Http\\Controllers;$/;"	n
+App\\Http\\Controllers	Controller.php	/^namespace App\\Http\\Controllers;$/;"	n
+App\\Http\\Controllers	HomeController.php	/^namespace App\\Http\\Controllers;$/;"	n
+App\\Http\\Controllers	ImagesController.php	/^namespace App\\Http\\Controllers;$/;"	n
+App\\Http\\Controllers	TagsController.php	/^namespace App\\Http\\Controllers;$/;"	n
+App\\Http\\Controllers	UsersController.php	/^namespace App\\Http\\Controllers;$/;"	n
+App\\Http\\Controllers\\Auth	Auth/ForgotPasswordController.php	/^namespace App\\Http\\Controllers\\Auth;$/;"	n
+App\\Http\\Controllers\\Auth	Auth/LoginController.php	/^namespace App\\Http\\Controllers\\Auth;$/;"	n
+App\\Http\\Controllers\\Auth	Auth/RegisterController.php	/^namespace App\\Http\\Controllers\\Auth;$/;"	n
+App\\Http\\Controllers\\Auth	Auth/ResetPasswordController.php	/^namespace App\\Http\\Controllers\\Auth;$/;"	n
+App\\Http\\Controllers\\Auth	Auth/VerificationController.php	/^namespace App\\Http\\Controllers\\Auth;$/;"	n
+App\\Http\\Controllers\\Work	Work/CategoriesWorkController.php	/^namespace App\\Http\\Controllers\\Work;$/;"	n
+App\\Http\\Controllers\\Work	Work/TechToolController.php	/^namespace App\\Http\\Controllers\\Work;$/;"	n
+App\\Http\\Controllers\\Work	Work/TechnologiesController.php	/^namespace App\\Http\\Controllers\\Work;$/;"	n
+App\\Http\\Controllers\\Work	Work/WorksController.php	/^namespace App\\Http\\Controllers\\Work;$/;"	n
+Article	ArticlesController.php	/^use App\\Article;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Article
+Article	HomeController.php	/^use App\\Article;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Article
+ArticleRequest	ArticlesController.php	/^use App\\Http\\Requests\\ArticleRequest;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Http\\Requests\\ArticleRequest
+ArticlesController	ArticlesController.php	/^class ArticlesController extends Controller$/;"	c	namespace:App\\Http\\Controllers
+Auth	ArticlesController.php	/^use Illuminate\\Support\\Facades\\Auth;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Support\\Facades\\Auth
+Auth	Auth/LoginController.php	/^use Illuminate\\Support\\Facades\\Auth;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:Illuminate\\Support\\Facades\\Auth
+AuthenticatesUsers	Auth/LoginController.php	/^use Illuminate\\Foundation\\Auth\\AuthenticatesUsers;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:Illuminate\\Foundation\\Auth\\AuthenticatesUsers
+AuthorizesRequests	Controller.php	/^use Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests
+BaseController	Controller.php	/^use Illuminate\\Routing\\Controller as BaseController;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Routing\\Controller
+Carbon	HomeController.php	/^use Carbon\\Carbon;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Carbon\\Carbon
+CategoriesController	CategoriesController.php	/^class CategoriesController extends Controller$/;"	c	namespace:App\\Http\\Controllers
+CategoriesWorkController	Work/CategoriesWorkController.php	/^class CategoriesWorkController extends Controller$/;"	c	namespace:App\\Http\\Controllers\\Work
+Category	ArticlesController.php	/^use App\\Category;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Category
+Category	CategoriesController.php	/^use App\\Category;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Category
+Category	HomeController.php	/^use App\\Category;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Category
+CategoryRequest	CategoriesController.php	/^use App\\Http\\Requests\\CategoryRequest;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Http\\Requests\\CategoryRequest
+CategoryWork	Work/CategoriesWorkController.php	/^use App\\CategoryWork;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\CategoryWork
+CategoryWork	Work/WorksController.php	/^use App\\CategoryWork;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\CategoryWork
+ContactRequest	HomeController.php	/^use App\\Http\\Requests\\ContactRequest;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Http\\Requests\\ContactRequest
+Controller	Auth/ForgotPasswordController.php	/^use App\\Http\\Controllers\\Controller;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:App\\Http\\Controllers\\Controller
+Controller	Auth/LoginController.php	/^use App\\Http\\Controllers\\Controller;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:App\\Http\\Controllers\\Controller
+Controller	Auth/RegisterController.php	/^use App\\Http\\Controllers\\Controller;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:App\\Http\\Controllers\\Controller
+Controller	Auth/ResetPasswordController.php	/^use App\\Http\\Controllers\\Controller;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:App\\Http\\Controllers\\Controller
+Controller	Auth/VerificationController.php	/^use App\\Http\\Controllers\\Controller;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:App\\Http\\Controllers\\Controller
+Controller	Controller.php	/^class Controller extends BaseController$/;"	c	namespace:App\\Http\\Controllers
+Controller	Work/CategoriesWorkController.php	/^use App\\Http\\Controllers\\Controller;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\Http\\Controllers\\Controller
+Controller	Work/TechToolController.php	/^use App\\Http\\Controllers\\Controller;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\Http\\Controllers\\Controller
+Controller	Work/TechnologiesController.php	/^use App\\Http\\Controllers\\Controller;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\Http\\Controllers\\Controller
+Controller	Work/WorksController.php	/^use App\\Http\\Controllers\\Controller;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\Http\\Controllers\\Controller
+DB	ImagesController.php	/^use Illuminate\\Support\\Facades\\DB;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Support\\Facades\\DB
+DispatchesJobs	Controller.php	/^use Illuminate\\Foundation\\Bus\\DispatchesJobs;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Foundation\\Bus\\DispatchesJobs
+Flash	CategoriesController.php	/^use Laracasts\\Flash\\Flash;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Laracasts\\Flash\\Flash
+Flash	UsersController.php	/^use Laracasts\\Flash\\Flash;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Laracasts\\Flash\\Flash
+Flash	Work/TechnologiesController.php	/^use Laracasts\\Flash\\Flash;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:Laracasts\\Flash\\Flash
+Flash	Work/WorksController.php	/^use Laracasts\\Flash;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:Laracasts\\Flash
+ForgotPasswordController	Auth/ForgotPasswordController.php	/^class ForgotPasswordController extends Controller$/;"	c	namespace:App\\Http\\Controllers\\Auth
+Hash	Auth/RegisterController.php	/^use Illuminate\\Support\\Facades\\Hash;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:Illuminate\\Support\\Facades\\Hash
+HomeController	HomeController.php	/^class HomeController extends Controller$/;"	c	namespace:App\\Http\\Controllers
+Image	ImagesController.php	/^use App\\Image;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Image
+Image	Work/WorksController.php	/^use App\\Image;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\Image
+ImagesController	ImagesController.php	/^class ImagesController extends Controller$/;"	c	namespace:App\\Http\\Controllers
+Input	Work/TechnologiesController.php	/^use Illuminate\\Support\\Facades\\Input;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:Illuminate\\Support\\Facades\\Input
+LoginController	Auth/LoginController.php	/^class LoginController extends Controller$/;"	c	namespace:App\\Http\\Controllers\\Auth
+Mail	HomeController.php	/^use Illuminate\\Support\\Facades\\Mail;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Support\\Facades\\Mail
+Redirect	ArticlesController.php	/^use illuminate\\Support\\Facades\\Redirect;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:illuminate\\Support\\Facades\\Redirect
+RegisterController	Auth/RegisterController.php	/^class RegisterController extends Controller$/;"	c	namespace:App\\Http\\Controllers\\Auth
+RegistersUsers	Auth/RegisterController.php	/^use Illuminate\\Foundation\\Auth\\RegistersUsers;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:Illuminate\\Foundation\\Auth\\RegistersUsers
+Request	ArticlesController.php	/^use Illuminate\\Http\\Request;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Http\\Request
+Request	CategoriesController.php	/^use Illuminate\\Http\\Request;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Http\\Request
+Request	HomeController.php	/^use Illuminate\\Http\\Request;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Http\\Request
+Request	ImagesController.php	/^use Illuminate\\Http\\Request;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Http\\Request
+Request	TagsController.php	/^use Illuminate\\Http\\Request;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Http\\Request
+Request	UsersController.php	/^use Symfony\\Component\\HttpFoundation\\Request;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Symfony\\Component\\HttpFoundation\\Request
+Request	Work/CategoriesWorkController.php	/^use Illuminate\\Http\\Request;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:Illuminate\\Http\\Request
+Request	Work/TechToolController.php	/^use Illuminate\\Http\\Request;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:Illuminate\\Http\\Request
+Request	Work/TechnologiesController.php	/^use Illuminate\\Http\\Request;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:Illuminate\\Http\\Request
+Request	Work/WorksController.php	/^use Illuminate\\Http\\Request;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:Illuminate\\Http\\Request
+ResetPasswordController	Auth/ResetPasswordController.php	/^class ResetPasswordController extends Controller$/;"	c	namespace:App\\Http\\Controllers\\Auth
+ResetsPasswords	Auth/ResetPasswordController.php	/^use Illuminate\\Foundation\\Auth\\ResetsPasswords;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:Illuminate\\Foundation\\Auth\\ResetsPasswords
+SendsPasswordResetEmails	Auth/ForgotPasswordController.php	/^use Illuminate\\Foundation\\Auth\\SendsPasswordResetEmails;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:Illuminate\\Foundation\\Auth\\SendsPasswordResetEmails
+SlugService	ArticlesController.php	/^use \\Cviebrock\\EloquentSluggable\\Services\\SlugService;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:\\Cviebrock\\EloquentSluggable\\Services\\SlugService
+Tag	ArticlesController.php	/^use App\\Tag;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Tag
+Tag	TagsController.php	/^use App\\Tag;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Tag
+TagRequest	TagsController.php	/^use App\\Http\\Requests\\TagRequest;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Http\\Requests\\TagRequest
+TagsController	TagsController.php	/^class TagsController extends Controller$/;"	c	namespace:App\\Http\\Controllers
+TechToolController	Work/TechToolController.php	/^class TechToolController extends Controller$/;"	c	namespace:App\\Http\\Controllers\\Work
+TechnologiesController	Work/TechnologiesController.php	/^class TechnologiesController extends Controller$/;"	c	namespace:App\\Http\\Controllers\\Work
+Technology	Work/TechnologiesController.php	/^use App\\Technology;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\Technology
+TechnologyTool	Work/TechToolController.php	/^use App\\TechnologyTool;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\TechnologyTool
+TechnologyTool	Work/TechnologiesController.php	/^use App\\TechnologyTool;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\TechnologyTool
+Tool	Work/TechnologiesController.php	/^use App\\Tool;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\Tool
+UniqueTechToll	Work/TechnologiesController.php	/^use App\\Rules\\UniqueTechToll;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\Rules\\UniqueTechToll
+User	Auth/RegisterController.php	/^use App\\User;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:App\\User
+User	UsersController.php	/^use App\\User;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\User
+UserRequest	UsersController.php	/^use App\\Http\\Requests\\UserRequest;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:App\\Http\\Requests\\UserRequest
+UsersController	UsersController.php	/^Class UsersController extends Controller$/;"	c	namespace:App\\Http\\Controllers
+ValidatesRequests	Controller.php	/^use Illuminate\\Foundation\\Validation\\ValidatesRequests;$/;"	a	namespace:App\\Http\\Controllers	typeref:unknown:Illuminate\\Foundation\\Validation\\ValidatesRequests
+Validator	Auth/RegisterController.php	/^use Illuminate\\Support\\Facades\\Validator;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:Illuminate\\Support\\Facades\\Validator
+Validator	Work/CategoriesWorkController.php	/^use Illuminate\\Support\\Facades\\Validator;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:Illuminate\\Support\\Facades\\Validator
+Validator	Work/TechnologiesController.php	/^use Illuminate\\Support\\Facades\\Validator;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:Illuminate\\Support\\Facades\\Validator
+VerificationController	Auth/VerificationController.php	/^class VerificationController extends Controller$/;"	c	namespace:App\\Http\\Controllers\\Auth
+VerifiesEmails	Auth/VerificationController.php	/^use Illuminate\\Foundation\\Auth\\VerifiesEmails;$/;"	a	namespace:App\\Http\\Controllers\\Auth	typeref:unknown:Illuminate\\Foundation\\Auth\\VerifiesEmails
+View	Work/TechnologiesController.php	/^use Illuminate\\Support\\Facades\\View;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:Illuminate\\Support\\Facades\\View
+Work	Work/WorksController.php	/^use App\\Work;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\Work
+WorkRequest	Work/WorksController.php	/^use App\\Http\\Requests\\Works\\WorkRequest;$/;"	a	namespace:App\\Http\\Controllers\\Work	typeref:unknown:App\\Http\\Requests\\Works\\WorkRequest
+WorksController	Work/WorksController.php	/^class WorksController extends Controller$/;"	c	namespace:App\\Http\\Controllers\\Work
+__construct	Auth/ForgotPasswordController.php	/^    public function __construct()$/;"	f	class:App\\Http\\Controllers\\Auth\\ForgotPasswordController
+__construct	Auth/LoginController.php	/^    public function __construct()$/;"	f	class:App\\Http\\Controllers\\Auth\\LoginController
+__construct	Auth/RegisterController.php	/^    public function __construct()$/;"	f	class:App\\Http\\Controllers\\Auth\\RegisterController
+__construct	Auth/ResetPasswordController.php	/^    public function __construct()$/;"	f	class:App\\Http\\Controllers\\Auth\\ResetPasswordController
+__construct	Auth/VerificationController.php	/^    public function __construct()$/;"	f	class:App\\Http\\Controllers\\Auth\\VerificationController
+__construct	HomeController.php	/^    public function __construct(){$/;"	f	class:App\\Http\\Controllers\\HomeController
+__construct	UsersController.php	/^    public function  __construct()$/;"	f	class:App\\Http\\Controllers\\UsersController
+character_limiter	ArticlesController.php	/^    function character_limiter($str, $n = 130, $end_char = '...')$/;"	f	class:App\\Http\\Controllers\\ArticlesController
+create	ArticlesController.php	/^    public function create()$/;"	f	class:App\\Http\\Controllers\\ArticlesController
+create	Auth/RegisterController.php	/^    protected function create(array $data)$/;"	f	class:App\\Http\\Controllers\\Auth\\RegisterController
+create	CategoriesController.php	/^    public function create()$/;"	f	class:App\\Http\\Controllers\\CategoriesController
+create	TagsController.php	/^    public function create()$/;"	f	class:App\\Http\\Controllers\\TagsController
+create	UsersController.php	/^    public function create(){$/;"	f	class:App\\Http\\Controllers\\UsersController
+create	Work/WorksController.php	/^    public function create()$/;"	f	class:App\\Http\\Controllers\\Work\\WorksController
+destroy	ArticlesController.php	/^    public function destroy($id)$/;"	f	class:App\\Http\\Controllers\\ArticlesController
+destroy	CategoriesController.php	/^    public function destroy($id)$/;"	f	class:App\\Http\\Controllers\\CategoriesController
+destroy	TagsController.php	/^    public function destroy($id)$/;"	f	class:App\\Http\\Controllers\\TagsController
+destroy	UsersController.php	/^    public function destroy($id){$/;"	f	class:App\\Http\\Controllers\\UsersController
+destroy	Work/CategoriesWorkController.php	/^    public function destroy($id){$/;"	f	class:App\\Http\\Controllers\\Work\\CategoriesWorkController
+destroy	Work/TechnologiesController.php	/^    public function destroy($id){$/;"	f	class:App\\Http\\Controllers\\Work\\TechnologiesController
+destroy	Work/WorksController.php	/^    public function destroy($id)$/;"	f	class:App\\Http\\Controllers\\Work\\WorksController
+destroyTool	Work/TechnologiesController.php	/^    public function destroyTool($id){$/;"	f	class:App\\Http\\Controllers\\Work\\TechnologiesController
+edit	ArticlesController.php	/^    public function edit($id)$/;"	f	class:App\\Http\\Controllers\\ArticlesController
+edit	CategoriesController.php	/^    public function edit($id)$/;"	f	class:App\\Http\\Controllers\\CategoriesController
+edit	TagsController.php	/^    public function edit($id)$/;"	f	class:App\\Http\\Controllers\\TagsController
+edit	UsersController.php	/^    public function edit($id){$/;"	f	class:App\\Http\\Controllers\\UsersController
+edit	Work/TechnologiesController.php	/^    public function edit($id){$/;"	f	class:App\\Http\\Controllers\\Work\\TechnologiesController
+edit	Work/WorksController.php	/^    public function edit($id)$/;"	f	class:App\\Http\\Controllers\\Work\\WorksController
+guardaImagen	Work/WorksController.php	/^    protected function guardaImagen( $name ){$/;"	f	class:App\\Http\\Controllers\\Work\\WorksController
+index	ArticlesController.php	/^    public function index(Request $r)$/;"	f	class:App\\Http\\Controllers\\ArticlesController
+index	CategoriesController.php	/^    public function index()$/;"	f	class:App\\Http\\Controllers\\CategoriesController
+index	HomeController.php	/^    public function index()$/;"	f	class:App\\Http\\Controllers\\HomeController
+index	ImagesController.php	/^    public function index(){$/;"	f	class:App\\Http\\Controllers\\ImagesController
+index	TagsController.php	/^    public function index(Request $r)$/;"	f	class:App\\Http\\Controllers\\TagsController
+index	UsersController.php	/^    public function index(){$/;"	f	class:App\\Http\\Controllers\\UsersController
+index	Work/CategoriesWorkController.php	/^    public function index(){$/;"	f	class:App\\Http\\Controllers\\Work\\CategoriesWorkController
+index	Work/TechnologiesController.php	/^    public function index(Request $request, $filtering = null){$/;"	f	class:App\\Http\\Controllers\\Work\\TechnologiesController
+index	Work/WorksController.php	/^    public function index()$/;"	f	class:App\\Http\\Controllers\\Work\\WorksController
+indexGenerals	ImagesController.php	/^    public function indexGenerals(){$/;"	f	class:App\\Http\\Controllers\\ImagesController
+list	Work/TechToolController.php	/^    public function list( Request $request){$/;"	f	class:App\\Http\\Controllers\\Work\\TechToolController
+loginPath	Auth/LoginController.php	/^    protected $loginPath= '\/dashboard\/dashboard'; $/;"	v	class:App\\Http\\Controllers\\Auth\\LoginController
+logout	Auth/LoginController.php	/^    public function logout(){$/;"	f	class:App\\Http\\Controllers\\Auth\\LoginController
+msg	HomeController.php	/^    public function msg(ContactRequest $r){$/;"	f	class:App\\Http\\Controllers\\HomeController
+redirectAfterLogout	Auth/LoginController.php	/^    protected $redirectAfterLogout = '\/dashboard';$/;"	v	class:App\\Http\\Controllers\\Auth\\LoginController
+redirectTo	Auth/LoginController.php	/^    protected $redirectTo = '\/dashboard';$/;"	v	class:App\\Http\\Controllers\\Auth\\LoginController
+redirectTo	Auth/LoginController.php	/^    protected function redirectTo()$/;"	f	class:App\\Http\\Controllers\\Auth\\LoginController
+redirectTo	Auth/RegisterController.php	/^    protected $redirectTo = '\/admin';$/;"	v	class:App\\Http\\Controllers\\Auth\\RegisterController
+redirectTo	Auth/ResetPasswordController.php	/^    protected $redirectTo = '\/home';$/;"	v	class:App\\Http\\Controllers\\Auth\\ResetPasswordController
+redirectTo	Auth/VerificationController.php	/^    protected $redirectTo = '\/home';$/;"	v	class:App\\Http\\Controllers\\Auth\\VerificationController
+relationTag	HomeController.php	/^    public function relationTag(){$/;"	f	class:App\\Http\\Controllers\\HomeController
+relations	HomeController.php	/^    public function relations($rel){$/;"	f	class:App\\Http\\Controllers\\HomeController
+searchCategory	HomeController.php	/^    public function searchCategory($slug){$/;"	f	class:App\\Http\\Controllers\\HomeController
+searchTag	HomeController.php	/^    public function searchTag($slug){$/;"	f	class:App\\Http\\Controllers\\HomeController
+searchWorks	Work/WorksController.php	/^    public function searchWorks($slug){$/;"	f	class:App\\Http\\Controllers\\Work\\WorksController
+show	ArticlesController.php	/^    public function show($id)$/;"	f	class:App\\Http\\Controllers\\ArticlesController
+show	CategoriesController.php	/^    public function show($id)$/;"	f	class:App\\Http\\Controllers\\CategoriesController
+show	TagsController.php	/^    public function show($id)$/;"	f	class:App\\Http\\Controllers\\TagsController
+show	Work/WorksController.php	/^    public function show($id=null)$/;"	f	class:App\\Http\\Controllers\\Work\\WorksController
+store	ArticlesController.php	/^    public function store(ArticleRequest $request)$/;"	f	class:App\\Http\\Controllers\\ArticlesController
+store	CategoriesController.php	/^    public function store(CategoryRequest $r)$/;"	f	class:App\\Http\\Controllers\\CategoriesController
+store	ImagesController.php	/^     public function store(Request $r){$/;"	f	class:App\\Http\\Controllers\\ImagesController
+store	TagsController.php	/^    public function store(TagRequest $r)$/;"	f	class:App\\Http\\Controllers\\TagsController
+store	UsersController.php	/^    public function store(UserRequest $r){$/;"	f	class:App\\Http\\Controllers\\UsersController
+store	Work/CategoriesWorkController.php	/^    public function store(Request $request){$/;"	f	class:App\\Http\\Controllers\\Work\\CategoriesWorkController
+store	Work/TechnologiesController.php	/^    public function store(Request  $request){$/;"	f	class:App\\Http\\Controllers\\Work\\TechnologiesController
+store	Work/WorksController.php	/^    public function store(WorkRequest $request)$/;"	f	class:App\\Http\\Controllers\\Work\\WorksController
+storeTool	Work/TechnologiesController.php	/^    public function storeTool(Request $request){$/;"	f	class:App\\Http\\Controllers\\Work\\TechnologiesController
+update	ArticlesController.php	/^    public function update(Request $request, $id)$/;"	f	class:App\\Http\\Controllers\\ArticlesController
+update	CategoriesController.php	/^    public function update(CategoryRequest $request, $id)$/;"	f	class:App\\Http\\Controllers\\CategoriesController
+update	TagsController.php	/^    public function update(TagRequest $r, $id)$/;"	f	class:App\\Http\\Controllers\\TagsController
+update	UsersController.php	/^    public function update(Request $r,$id){$/;"	f	class:App\\Http\\Controllers\\UsersController
+update	Work/CategoriesWorkController.php	/^    public function update(Request $request,$id){$/;"	f	class:App\\Http\\Controllers\\Work\\CategoriesWorkController
+update	Work/TechnologiesController.php	/^    public function update(Request $request, $id){$/;"	f	class:App\\Http\\Controllers\\Work\\TechnologiesController
+update	Work/WorksController.php	/^    public function update(Request $request, $id)$/;"	f	class:App\\Http\\Controllers\\Work\\WorksController
+updateTool	Work/TechnologiesController.php	/^    public function updateTool(Request $request ,$id){$/;"	f	class:App\\Http\\Controllers\\Work\\TechnologiesController
+validator	Auth/RegisterController.php	/^    protected function validator(array $data)$/;"	f	class:App\\Http\\Controllers\\Auth\\RegisterController
+viewArticle	ArticlesController.php	/^    public function viewArticle($slug){$/;"	f	class:App\\Http\\Controllers\\ArticlesController
+viewWork	Work/WorksController.php	/^    public function viewWork($slug){$/;"	f	class:App\\Http\\Controllers\\Work\\WorksController

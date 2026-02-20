@@ -1,0 +1,27 @@
+.btn-flat
+ width: 16rem
+ height: 3rem
+ position: relative
+ z-index: 3
+ border: solid $naranja 4px
+ overflow: hidden
+
+.btn-text
+ font-weight: bolder
+ font-size: 1.2rem
+
+.btn-flat:after
+ transition: all .3s ease-in-out
+ position: absolute
+ top: 4rem
+ left: 4px
+ width: 16rem
+ height: 4rem
+ z-index: -1
+ background: $naranja
+ content: ''
+
+.btn-flat:hover:after
+    top: 0
+.btn-flat:hover
+    color: white

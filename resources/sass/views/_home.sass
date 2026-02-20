@@ -1,0 +1,185 @@
+//header
+// Mixin transform
+@mixin transform($transforms) 
+  -webkit-transform: $transforms
+  -moz-transform: $transforms
+  -ms-transform: $transforms
+  -o-transform: $transforms
+  transform: $transforms
+
+// TranslateY
+@mixin translateY($y) 
+  @include transform(translateY($y))
+
+@mixin translateX($x) 
+  @include transform(translate($x))
+
+main
+    overflow-x: hidden
+.img-roll
+    position: absolute
+    top: 35%
+    opacity: .3
+    z-index: 7
+    width: 450px
+    right: -180px
+    
+    @include media-breakpoint-up(md)   
+        &
+            width: auto
+            right: -350px
+            top: 20%
+
+  
+.header-main
+    position: relative
+    z-index: 6
+    background-image: url(../images/page/intro.svg)
+    background-attachment: fixed
+
+.bg-img
+    top: 0
+    position: fixed
+    width: 100%
+    height: 100%
+    z-index: 2
+
+.header-intro
+    position: relative
+    z-index: 3
+    box-shadow: 0 0 1000px white inset
+
+.header-intro h2
+    font-weight: 100
+    margin: -20px 0 0 
+
+.header-intro h2 .social,
+.header-intro h2 span
+    color: $naranja 
+
+section.about
+    min-height: 100vh
+    overflow-x: hidden
+    overflow-y: hidden
+
+.about-me 
+    padding: 6rem 0 2rem 0
+    position: relative
+
+    
+
+    
+    & &-wrapper
+        margin-left: -300px
+
+    @include media-breakpoint-up(md)   
+        & &-wrapper
+            margin-left: inherit
+	
+.subt
+    font-size: 12.25vw
+    color: white
+    position: relative
+    text-shadow: 6px 0 #ea5106, -1px 0 #ea5106,0 1px #ea5106,0 -1px #ea5106
+    letter-spacing: 10px
+    line-height: 72px
+
+@include media-breakpoint-up(md)   
+    .subt
+        font-size: 7.25vw
+
+
+.about-img 
+    width: 340px
+.about-footer
+    
+    padding-top: 8rem 
+    
+
+.about-me p
+    font-size: 1.19rem
+    text-shadow: 1.2px 1px #fbf2ab
+
+.about-skills 
+    position: relative
+
+    .about-skill_img_tit
+        position: absolute
+        width: 300px
+        bottom: -110px
+
+
+
+.about-skills #svg5 
+    position: absolute
+    width: 100%
+    left: 0
+
+
+.about-skills #svg5 path 
+    fill: #ea5106!important
+
+
+.about-skills .skills-wrapper 
+    position: relative
+
+
+.skill
+    flex-basis: inherit !important
+    min-height: 80px
+    font-size: 5vw
+
+main, .about, .works
+    position: relative
+    z-index: 5
+    background: white
+    color: #594e4e
+
+.about, .works
+    z-index: 3
+
+.works .works_img_bg
+    position: absolute
+    top:-20px
+    width: 230px
+
+
+
+@import 'layout/article-work'
+
+@media (min-width: 576px)
+    .about-me 
+        padding: 6rem 0 4rem 0
+	
+        
+        
+    .about-footer
+        padding-top:  10rem 
+    .about-img
+        width: 430px
+
+@media (min-width: 768px)
+    .about-me
+        padding: 11rem 0 6rem  0
+    .worksit
+        padding-top: 4rem 
+    .about-img
+        position: relative
+        top: -9.7rem
+    .about-skills .subt,
+    .works-header .subt 
+        transform: translate(-10px,10px)
+    
+
+@media (min-width: 992px) 
+    .work
+        width:700px
+
+    section.about .about-me-text
+        font-size: 1.24rem
+
+    .subt
+        line-height: .9
+
+
+    

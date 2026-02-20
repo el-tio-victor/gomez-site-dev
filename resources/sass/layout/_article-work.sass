@@ -1,0 +1,115 @@
+// Mixin transform
+@mixin transform($transforms) 
+  -webkit-transform: $transforms
+  -moz-transform: $transforms
+  -ms-transform: $transforms
+  -o-transform: $transforms
+  transform: $transforms
+
+// TranslateY
+@mixin translateY($y) 
+  @include transform(translateY($y))
+
+
+.item-work
+  min-height: 385px
+  position: relative
+  /*outline: solid 3px #ea51068c*/
+    
+  & .text
+    width: 100%
+    min-height: 150px
+
+  @include media-breakpoint-up(sm)   
+    &.item-work.item-up
+      @include translateY(-144px)
+    
+    & .text
+      min-height: 170px
+
+@include media-breakpoint-up(lg)   
+  .item-work
+    width: 400px
+  
+  
+        
+
+.title
+  font-weight: 100
+  color: #666
+  text-transform: uppercase
+  font-size: 1.75rem
+  line-height: 1
+  padding: 1rem
+
+.title-portfolio
+  color: #fff
+  position: relative
+  text-shadow: 6px 0 #ea5106, -1px 0 #ea5106, 0 1px #ea5106, 0 -1px #ea5106
+  font-size: 10vw
+
+@include media-breakpoint-up(md)   
+  .title-portfolio
+    font-size: 8vw
+
+
+        
+.cont-work-img
+  position: absolute
+  width: 94%
+  left: 3%
+  top: 3%
+  border-radius : 10px
+  overflow: hidden
+
+.work-info-title 
+ line-height: 1.3
+
+.work-info-title .title
+ font-size:  1.45rem
+ font-weight: 300
+
+
+
+.work-info-techs
+    width: 100%
+    z-index: 10
+
+
+
+.badge-tech
+    border: solid 1px  rgba(239,104,25,1)
+
+.line
+ width:      3.75rem
+ height:     .75rem
+ background: black
+
+.work-img
+ max-height: 310px
+ overflow:   hidden
+ position: relative
+
+.work 
+  position: relative
+  border-bottom: solid 1px #e5e5e5
+  padding: 20px 15px 45px 15px
+
+.work:after
+  content: ''
+  width: 0px
+  height: 0px 
+  position: absolute
+  bottom: -13px
+  right:20px
+  border-top: 13px solid #e5e5e5
+  border-left: 10px solid transparent
+  border-right: 10px solid transparent
+
+@include media-breakpoint-up(md)    
+    .work
+        width:600px
+
+@media (min-width: 992px) 
+    .work
+        width:700px

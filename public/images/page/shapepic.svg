@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500.70078"
+   height="450.51968"
+   viewBox="0 0 132.47708 119.2"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="shapepic.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="2.0938813"
+     inkscape:cx="239.98495"
+     inkscape:cy="197.24137"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="112.33425,79.649246"
+       orientation="1,0"
+       id="guide950" />
+    <sodipodi:guide
+       position="20.343998,72.067631"
+       orientation="1,0"
+       id="guide1142" />
+    <sodipodi:guide
+       position="67.729087,33.275038"
+       orientation="0,-1"
+       id="guide1682" />
+    <sodipodi:guide
+       position="20.343998,88.494462"
+       orientation="0,-1"
+       id="guide1722" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect846"
+       style="fill:#127475;fill-opacity:1;stroke:none;stroke-width:1.20224;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 14.296028,46.228317 c 0,0 68.281681,-3.471054 103.646212,0 l -5.82083,4.222704 2.74477,3.887018 -2.74477,4.558388 5.82083,4.222704 -5.82083,4.222704 c 3.3317,2.115475 4.80877,3.15529 4.71438,4.202006 -0.0944,1.046715 -1.76024,2.100329 -4.71438,4.2434 l 5.82083,4.222704 c -37.256915,2.804122 -66.389297,0 -103.646212,0 l 6.35,-4.222704 -4.586292,-4.119594 c 0,0 1.335401,-2.163994 4.586292,-4.325812 l -6.35,-4.222704 5.820833,-4.222704 c 0,0 -3.246113,-2.355637 -3.984648,-3.931221 -0.738536,-1.575584 1.030507,-2.371114 3.984648,-4.514185 z"
+       sodipodi:nodetypes="ccccccccccccccccscc"
+       inkscape:export-filename="C:\Users\w_cto\OneDrive\Imágenes\shape.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

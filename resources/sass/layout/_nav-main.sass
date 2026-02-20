@@ -1,0 +1,141 @@
+//estilos css para nav principal de sitio
+
+ 
+.logo
+    img
+        width: 24px
+        height: 24px
+
+.navbar-main
+    padding: 5px
+    position: fixed
+    z-index: 100
+    transition: all .4s ease-out
+    
+.nav-main-items
+    position: fixed
+    top: 33px
+    right: -1000px
+    width:70vw
+    height: 95vh
+    background: $naranja
+    transition: $transition
+    z-index: 100
+
+.navbar-main a
+    color: inherit
+    text-decoration: none
+    
+
+.nav-main-items.active
+    right:0
+    animation: mov 0.5s  1s ease 1
+
+.nav-main-items>div
+    width:100%
+
+.nav-main-items
+    .item
+        span
+            border-bottom:  solid 3px rgba(0,0,0,.3)
+
+.nav-main-items 
+    div.items
+        text-align: right
+
+.nav-main-items .item.active
+    background: black !important
+    color: white !important
+    padding: 0 5px
+    
+
+.nav-main-items .item
+    transition: all .4s ease-out
+.nav-main-items .item:hover
+    background: black !important
+    color: white !important
+    padding: 0 5px
+    transition: all .4s ease-in
+
+.btn-menu
+    border: solid 1px black
+    cursor: pointer
+
+.btn-menu.active
+    background: $naranja
+    border-color: $naranja
+
+.btn-menu.active
+    span
+        background: white
+
+.btn-menu
+    span
+        width: 22px
+        height: 4px
+        margin: 3px 0 
+        background: black
+        transition: all 1s ease-out
+        
+
+.btn-menu span.slash-top.active
+  transition: all .5s ease-in
+  transform: translateY(7px) rotate(45deg)
+
+.btn-menu span.slash-bottom.active
+  transition: all .5s ease-in
+  transform: translateY(-7px) rotate(-45deg)
+
+
+.btn-menu span.slash-middle.active
+  transition: all .5s ease-in
+  opacity: 0
+    
+.scroll-page 
+    background-color: white
+    box-shadow: 0 0 1px rgba(234,81,6,1)
+    transition: all .4s ease-in
+
+@keyframes mov
+    0% 
+        transform: translateX(-10px)
+    20% 
+        transform: translateX(10px)
+    30% 
+        transform: translateX(-5px)
+    40% 
+        transform: translateX(5px)
+    50% 
+        transform: translateX(-3px)
+    60% 
+        transform: translateX(3px)
+    70% 
+        transform: translateX(-1px)
+    80% 
+        transform: translateX(1px)
+    100% 
+        transform: translateX(0)
+  
+
+@media (min-width: 576px)
+    .btn-menu
+        display: none
+
+    .btn-login
+        border: solid 2px $naranja
+        padding: 0 3px
+        border-radius: 4px
+
+    .nav-main-items
+        position: inherit
+        width: inherit
+        height: inherit
+
+    .nav-main-items
+        position: inherit
+        background: transparent
+
+    .nav-main-items
+        .item
+            span
+                border-bottom: none

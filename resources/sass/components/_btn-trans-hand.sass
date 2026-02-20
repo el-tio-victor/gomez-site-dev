@@ -1,0 +1,28 @@
+.btn-trans-hand
+    width: 8.5rem
+    position: relative
+    font-size: 1.175rem
+.trans-hand
+    width: 0
+    height: 1.9rem
+    position: absolute
+    z-index: -1
+    text-align: right
+    background: black
+    transition: all .4s ease-out
+
+.trans-hand .icon
+    display: inline-block
+    background: white
+    padding: .4rem .1rem .4rem .3rem
+    color: $naranja
+
+.btn-trans-hand:hover .trans-hand
+    width: 10rem
+    transition: all .5s ease-in
+.btn-trans-hand:hover span
+    color: white
+    transition: all .4s .4s ease-in
+.btn-trans-hand:hover .icon
+     transition: all .2s .5s ease-in
+     transform: translate(5px)

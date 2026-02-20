@@ -1,0 +1,19 @@
+.categories-nav a.nav-link
+    background: black
+    color: white !important
+    transition: all .3s ease-in
+    border: solid 2px transparent
+    min-width: 127px
+    text-align: center
+.categories-nav a.nav-link.active
+    background: white
+    color: black !important
+    border: solid 2px $naranja
+.categories-nav a.nav-link.active::after
+    transform: rotate(180deg)
+    transition: all .4s ease-out
+.categories-nav a.nav-link:hover,
+.categories-nav a.nav-link:target
+    transition: all .3s ease-out
+    background: white
+    color: black !important    
