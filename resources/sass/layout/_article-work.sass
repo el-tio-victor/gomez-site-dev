@@ -1,3 +1,4 @@
+
 // Mixin transform
 @mixin transform($transforms) 
   -webkit-transform: $transforms
@@ -15,6 +16,10 @@
   min-height: 385px
   position: relative
   /*outline: solid 3px #ea51068c*/
+
+  &:hover
+    .btn-flat
+        @include btn-flat-active
     
   & .text
     width: 100%

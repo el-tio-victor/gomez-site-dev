@@ -2,10 +2,10 @@
 @if( $index == 0 )
 
     <div class="  p-0 col-12">
-    <a href="">
-        <div class=" col-12 d-flex  pb-2 pr-3
+        <div class="pl-2 col-12 d-lg-flex  pb-2 pr-3
         justify-content-end  col-sm-6  ">
-            <div class="item-work d-flex border">
+            @if($work_slug) <a href="{{route('portfolio.work',$work_slug)}}">@endif
+            <div class=" item-work d-flex border">
                 @component('site.portfolio.partials._work_content')
                     @slot('title',$title)
                     @slot('services', $services)
@@ -18,8 +18,10 @@
                     @slot('index',$index)
                 @endcomponent
             </div>
+            @if ($work_slug)
+                </a>
+            @endif
         </div>
-    </a>
     </div>
 @else
 

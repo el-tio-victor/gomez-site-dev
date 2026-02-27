@@ -31,10 +31,17 @@
                 </small>
                 @endforeach
             </div>
-        <div class="p-2 mt-3 d-flex justify-content-center align-items-center   border ">
+            <div class="col-12 d-flex justify-content-center pt-4 m-auto">
+
+                @component('dashboard.partials._btn-flat')
+                    @slot('text_link',
+                     '<span>ver más</span>&nbsp;<span style="font-size: 1.5rem;" class="icon-point-right"></span>')
+                @endcomponent 
+            </div>
+        <!--<div class="p-2 mt-3 d-flex justify-content-center align-items-center   border ">
             <span class='pr-2'>ver mas </span>
             <span style="font-size: 1.5rem;" class="icon-point-right"></span>
-        </div>
+        </div>-->
         </div>
     </div>
 </div>

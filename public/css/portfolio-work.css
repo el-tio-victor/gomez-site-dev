@@ -606,12 +606,10 @@ a.badge-dark:focus, a.badge-dark.focus {
   border: solid #ea5106 4px;
   overflow: hidden;
 }
-
-.btn-text {
-  font-weight: bolder;
+.btn-flat .btn-text {
+  font-weight: 500;
   font-size: 1.2rem;
 }
-
 .btn-flat:after {
   transition: all 0.3s ease-in-out;
   position: absolute;
@@ -623,13 +621,11 @@ a.badge-dark:focus, a.badge-dark.focus {
   background: #ea5106;
   content: "";
 }
-
-.btn-flat:hover:after {
-  top: 0;
-}
-
 .btn-flat:hover {
   color: white;
+}
+.btn-flat:hover::after {
+  top: 0;
 }
 
 .align-baseline {
@@ -5102,6 +5098,14 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 1;
 }
 
+.link:hover {
+  color: #ea5106 !important;
+}
+
+.link svg {
+  transition: 0.3s 0.2s ease-in-out;
+}
+
 .header-intro {
   z-index: 2;
   margin: 0.7rem;
@@ -5113,17 +5117,28 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .header-main-wrapper {
-  padding: 0 0 0 0;
   height: 100vh;
 }
 
-.header-main:after {
-  width: 4rem;
-  height: 0.75rem;
-  margin: 4rem auto;
+.work-title {
+  margin: 8rem auto 5rem auto;
+  color: white;
+  font-weight: 400;
   background-color: black;
   display: block;
   content: "";
+}
+
+@media all and (min-width: 768px) {
+  .work-title {
+    margin: 15rem auto 10rem auto;
+  }
+}
+.icon-cursor {
+  display: inline-block;
+  width: 9px;
+  height: 1.8rem;
+  background-color: #ea5106;
 }
 
 .work_image_main {
@@ -5144,21 +5159,65 @@ a.text-dark:hover, a.text-dark:focus {
   list-style: none;
 }
 
+.work-techs, .work-detail {
+  min-height: 8rem;
+}
+
+@media all and (min-width: 768px) {
+  .work-techs {
+    position: sticky;
+    top: 50px;
+  }
+}
+.work-techs ul {
+  padding-inline-start: 5px;
+}
+
+@media all and (min-width: 1024px) {
+  .work-techs ul {
+    padding-inline-start: 45px;
+  }
+}
+.work-techs {
+  background-color: #eb7b07;
+}
+
 .work-techs-item {
   font-size: 2.5rem;
   overflow-wrap: break-word;
+  position: relative;
 }
 
-.work-techs, .work-detail {
-  min-height: 8rem;
+.work-techs-tool-container {
+  position: absolute;
+  left: 25px;
+  bottom: -5px;
+  line-height: 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: solid 1.2px #eb7b07;
+}
+
+.work-techs-tool-item {
+  font-size: 0.75rem;
+  line-height: 0;
+}
+
+.work-detail img {
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
   .work-info {
     padding: 11rem 0;
   }
+  .btn-flat {
+    margin-bottom: 7rem;
+  }
 }
 .grid-gallery {
+  padding: 0 40px;
+  margin-bottom: 10rem;
   display: grid;
   grid-auto-rows: 200px;
   grid-gap: 1rem;

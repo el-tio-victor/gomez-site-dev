@@ -16,7 +16,7 @@ $categoryWork = $work->categoryWork->categoryWork_name;
       $img_src = $work_image_main->name; 
       $video_class = (MyHelpers::typeFile( $img_src ) === 'video') ? 'header-main-wrapper-video' : '';
     @endphp
-  @component('site.partials._header',['class_flex_childs' => 'justify-content-center pt-3 align-items-end','class_header_video'=>$video_class])
+  @component('site.partials._header',['class_flex_childs' => 'flex-column justify-content-center pt-3 align-items-end','class_header_video'=>$video_class])
     @if( MyHelpers::typeFile( $img_src ) === 'image' )
       <img src="{{asset('images/works/'.$img_src)}}" alt=""  class="img-fluid ork_image_main" />
     @elseif( MyHelpers::typeFile( $img_src ) ==='video' )
@@ -27,17 +27,21 @@ $categoryWork = $work->categoryWork->categoryWork_name;
       <div class='  d-flex justify-content-center align-items-center header-itro'>
         <!-- <h1 class='pl-2 pr-2'>{{$work->title}}</h1> -->         
       </div>
+
+    <h1 class='d-flex align-items-center pl-2 pr-2 work-title'>
+        <span class="mr-2 icon-cursor"></span>
+        {{$work->title}}
+    </h1>
   @endcomponent
 @endsection
 
 @section('content')
 	<section class="mt-5   work-inf">
-	  <div class=' col-12 col-md-10 col-lg-8 m-auto d-flex flex-column flex-md-row justify-content-around align-items-start work-info-wrapper' >
+	  <div class=' col-12 col-lg-10  m-auto d-flex flex-column flex-md-row justify-content-around align-items-start work-info-wrapper' >
 
 	    @component('site.portfolio.partials._work_techs',['work_techs' => $work_techs])
             @endcomponent
-            <div class="col-12 col-sm-8 col-md-6 work-detail ">
-                <h1 class='pl-2 pr-2'>{{$work->title}}</h1>
+            <div class="col-12  col-md-6 pt-3 work-detail ">
               <h3>
                 <span class="">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
@@ -47,7 +51,7 @@ $categoryWork = $work->categoryWork->categoryWork_name;
                 <span> El reto</span>
                 </h3>
               <div class='d-flex justify-content-start'>
-                <div class="col-10 col-sm-11">
+                <div class="m-auto col-10 col-sm-11">
                   {!! $work->detail !!}
 		  
 	  	  @if($work->url != '' && $categoryWork != 'PEN')		
@@ -65,7 +69,7 @@ $categoryWork = $work->categoryWork->categoryWork_name;
 	  </div>
         </section>
     @if( count($work_images) > 0 && $categoryWork != 'PEN' )
-    <section class="mb-5 container-fluid grid-gallery">
+    <section class=" container-fluid grid-gallery">
         @foreach( $work_images as $img)
             <a class='grid-gallery__item' href="">
                 <img class='grid-gallery__image' src="{{asset('images/works/'.$img->name)}}" alt="" />
@@ -74,15 +78,20 @@ $categoryWork = $work->categoryWork->categoryWork_name;
     	@endforeach
     </section>
     @elseif( $categoryWork === 'PEN')
-    <section class='mb-5 container-fluid'>
-        {!! $work->url !!}
+    <section class='mb-5 pt-4 pb-5 mt-5 ml-auto text-center mr-auto container-fluid'>
+        <a class="d-flex justify-content-center align-items-center link" href="{!! $work->url !!}" target="_blank" >
+            VER EN VIVO &nbsp;
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+            </svg>
+        </a> 
     </section>
     @endif
-    <div class="mt-1 mb-5 d-flex align-items-center justify-content-center">
+    <div class="mt-5 pt-2 mb-5 d-flex align-items-center justify-content-center">
             <a href="{{route('portfolio')}}">
 		@component('dashboard.partials._btn-flat')
                     @slot('text_link','REGRESAR A PORTAFOLIO')
-                @endcomponent  
+        @endcomponent  
             </a>
     </div>
 @endsection
