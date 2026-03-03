@@ -1,3 +1,8 @@
+// Variables
+$image-size: 200px
+$gap-size: 1rem
+$breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default
+
 .color-naranja 
     color: $naranja
 
@@ -15,6 +20,12 @@ $img_margin: .7rem
     position: relative
     z-index: 1
 
+.link:hover
+    color: $naranja!important
+
+.link svg
+    transition : .3s .2s ease-in-out
+    
 
 
 .header-intro
@@ -27,16 +38,25 @@ $img_margin: .7rem
     font-size:  1.75rem!important
 
 .header-main-wrapper
-    padding: 0 0 0 0
     height: 100vh
 
-.header-main:after
-    width: 4rem
-    height: .75rem
-    margin: 4rem auto
+.work-title
+    margin: 8rem auto 5rem auto
+    color: white
+    font-weight: 400
     background-color: black
     display: block
     content: ''
+
+@media all and (min-width: map-get($breakpoints, 'medium'))
+    .work-title
+        margin: 15rem auto 10rem auto
+
+.icon-cursor
+    display: inline-block
+    width: 9px
+    height:1.8rem 
+    background-color: $naranja
 
 .work_image_main
     position: absolute
@@ -53,23 +73,62 @@ $img_margin: .7rem
 .work-techs ul
     list-style: none
 
-.work-techs-item
-    font-size: 2.5rem
-    overflow-wrap: break-word
+
 
 .work-techs, .work-detail
     min-height: 8rem
 
+@media all and (min-width: map-get($breakpoints, 'medium'))
+    .work-techs
+        position: sticky
+        top: 50px
+
+.work-techs 
+    ul 
+        padding-inline-start: 5px
+
+@media all and (min-width: map-get($breakpoints, 'large'))
+    .work-techs 
+        ul 
+            padding-inline-start: 45px
+
+.work-techs
+    background-color: #eb7b07
+
+.work-techs-item
+    font-size: 2.5rem
+    overflow-wrap: break-word
+    position: relative
+
+.work-techs-tool-container
+    position: absolute
+    left: 25px
+    bottom: -5px
+    line-height: 0
+    padding: 10px 15px
+    border-radius: 20px
+    border: solid 1.2px #eb7b07
+
+.work-techs-tool-item
+    font-size: .75rem
+    line-height: 0
+
+.work-detail img
+    max-width: 100%
+
+
 @media(min-width: 768px)
     .work-info
         padding: 11rem 0
+    
+    .btn-flat
+        margin-bottom: 7rem
 
-// Variables
-$image-size: 200px
-$gap-size: 1rem
-$breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default
+
 
 .grid-gallery
+    padding: 0 40px
+    margin-bottom: 10rem
     display: grid
     grid-auto-rows: $image-size
     grid-gap: $gap-size 
