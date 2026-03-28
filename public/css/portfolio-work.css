@@ -5117,7 +5117,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .header-main-wrapper {
-  height: 100vh;
+  height: auto !important;
 }
 
 .work-title {
@@ -5179,13 +5179,16 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 .work-techs {
-  background-color: #eb7b07;
+  /*background-color: #eb7b07*/
+  padding-bottom: 1.8rem;
+  border-bottom: solid 0.45rem #eb7b07;
 }
 
 .work-techs-item {
   font-size: 2.5rem;
   overflow-wrap: break-word;
   position: relative;
+  padding-left: 35px;
 }
 
 .work-techs-tool-container {
@@ -5194,13 +5197,13 @@ a.text-dark:hover, a.text-dark:focus {
   bottom: -5px;
   line-height: 0;
   padding: 10px 15px;
-  border-radius: 20px;
-  border: solid 1.2px #eb7b07;
+  border-left: solid 0.25rem #ea5106;
 }
 
 .work-techs-tool-item {
   font-size: 0.75rem;
   line-height: 0;
+  color: #eb7b07;
 }
 
 .work-detail img {
