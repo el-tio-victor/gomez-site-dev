@@ -21,8 +21,8 @@ Para correr este proyecto localmente, asegúrate de tener instalado [Docker Desk
 ### 1. Clonar el repositorio
 Usa el alias de tu llave personal configurada:
 ```bash
-git clone git@github.com-personal:tu-usuario/nombre-del-repo.git
-cd nombre-del-repo
+git clone git@github.com:el-tio-victor/gomez-site-dev.git
+cd gomez-site-dev
 ```
 
 ### 2. Instalar dependencias iniciales
