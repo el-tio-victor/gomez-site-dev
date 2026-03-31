@@ -1,7 +1,7 @@
 # 🚀 Mi Portafolio y Blog Personal
 🌐 [Visita el sitio en vivo: gomez-sito.mx](https://gomez-site.mx)
 
-¡Bienvenido a mi proyecto personal! Este es mi portafolio desarrollado con **Laravel**, donde comparto mis proyectos, habilidades y algun que otro apunte que utilizo en mi día a día como desarrollador.
+¡Bienvenido a mi proyecto personal! Este es mi portafolio desarrollado con **Laravel**, donde comparto mis proyectos, habilidades y algun que otro apunte que utilizo en mi día a día como desarrollador.El entorno local está configurado para correr en el **puerto 8081**.
 
 ## 🛠️ Tecnologías utilizadas
 - **Backend:** Laravel 10 / PHP 8.2
@@ -39,6 +39,7 @@ docker run --rm \
 ```bash
 cp .env.example .env
 ```
+Importante: Asegúrate de que en tu .env tengas definido APP_PORT=8081
 
 ### 4.  Levantar los contenedores
 ```bash
@@ -54,7 +55,7 @@ cp .env.example .env
 ```
 
 ### 6. ¡Listo!
-Ahora puedes acceder al sitio en: http://localhost
+Ahora puedes acceder al sitio en: http://localhost:8081 (Puerto 8081)
 
 📝 Comandos Útiles de Sail
 Detener el proyecto: ./vendor/bin/sail stop
