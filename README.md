@@ -1,64 +1,73 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 🚀 Mi Portafolio y Blog Personal
+🌐 [Visita el sitio en vivo: gomez-sito.mx](https://gomez-site.mx)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+¡Bienvenido a mi proyecto personal! Este es mi portafolio desarrollado con **Laravel**, donde comparto mis proyectos, habilidades y algun que otro apunte que utilizo en mi día a día como desarrollador.
 
-## About Laravel
+## 🛠️ Tecnologías utilizadas
+- **Backend:** Laravel 10 / PHP 8.2
+- **Frontend:** Blade / Bootstrap 4.6 / SASS / Jquery
+- **Base de datos:** MySQL 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Características
+- [ ] Panel de administración para Blog y Portafolio.
+- [ ] Sección de portafolio y blog con filtro.
+- [ ] Diseño totalmente responsive.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🐳 Instalación Local (Con Docker Sail)
 
-## Learning Laravel
+Para correr este proyecto localmente, asegúrate de tener instalado [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 1. Clonar el repositorio
+Usa el alias de tu llave personal configurada:
+```bash
+git clone git@github.com-personal:tu-usuario/nombre-del-repo.git
+cd nombre-del-repo
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 2. Instalar dependencias iniciales
+Como la carpeta vendor no está en el repo, usamos este comando de Docker para instalar Composer por primera vez:
+```bash
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php82-composer:latest \
+    composer install --ignore-platform-reqs
+```
+### 3. Configurar Entorno
+```bash
+cp .env.example .env
+```
 
-## Laravel Sponsors
+### 4.  Levantar los contenedores
+```bash
+./vendor/bin/sail up -d
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 5. Configuración final de Laravel
+```bash
+./vendor/bin/sail artisan key:generate
+./vendor/bin/sail npm install
+./vendor/bin/sail mysql < blogGS.sql
+./vendor/bin/sail npm run build
+```
 
-### Premium Partners
+### 6. ¡Listo!
+Ahora puedes acceder al sitio en: http://localhost
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+📝 Comandos Útiles de Sail
+Detener el proyecto: ./vendor/bin/sail stop
 
-## Contributing
+Ejecutar tests: ./vendor/bin/sail artisan test
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Acceder a la consola de Tinker: ./vendor/bin/sail artisan thinker
 
-## Code of Conduct
+📝 Notas Adicionales
+El archivo SQL se importa directamente al contenedor de MySQL gestionado por Sail.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Asegúrate de que las credenciales en tu .env coincidan con las de Sail (por defecto: DB_USERNAME=sail, DB_PASSWORD=password).
 
-## Security Vulnerabilities
+Hecho con ❤️ por Victor Gomez
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   
