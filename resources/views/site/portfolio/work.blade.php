@@ -18,7 +18,7 @@ $video_class = (MyHelpers::typeFile( $img_src ) === 'video') ? 'header-main-wrap
 @endphp
 @component('site.partials._header',['class_flex_childs' => 'flex-column justify-content-center pt-3 align-items-center','class_header_video'=>$video_class])
 @if( MyHelpers::typeFile( $img_src ) === 'image' )
-<img src="{{asset('images/works/'.$img_src)}}" alt="" class="img-fluid ork_image_main" />
+<img src="{{asset('images/works/'.$img_src)}}" alt="" class="img-fluid work_image_main" />
 @elseif( MyHelpers::typeFile( $img_src ) ==='video' )
 @component('site.portfolio.partials._work-video', ['class' => ' work_video_main'])
 @slot('src',$img_src )
@@ -28,16 +28,19 @@ $video_class = (MyHelpers::typeFile( $img_src ) === 'video') ? 'header-main-wrap
   <!-- <h1 class='pl-2 pr-2'>{{$work->title}}</h1> -->
 </div>
 
-<h1 class='d-flex align-items-center pl-2 pr-2 work-title'>
+<div class="pb-2 work-title">
+<h1 class='d-flex align-items-center pl-2 pr-2 title'>
   <span class="mr-2 icon-cursor"></span>
   {{$work->title}}
 </h1>
+<span class="badge bg-secondary badge-category">{{ $categoryWork }}</span>
+</div>
 @endcomponent
 @endsection
 
 @section('content')
-<section class="mt-5   work-inf">
-  <div class=' col-12 col-lg-10  m-auto d-flex flex-column flex-md-row justify-content-around align-items-start work-info-wrapper'>
+<section class=" work-info">
+  <div class=' col-12 col-lg-10 p-0  m-auto d-flex flex-column flex-md-row justify-content-around align-items-start work-info-wrapper'>
 
     @component('site.portfolio.partials._work_techs',['work_techs' => $work_techs])
     @endcomponent

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\Work\CategoriesWorkController;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\Work\WorksController;
 use App\Http\Controllers\Work\TechnologiesController;
@@ -38,7 +39,7 @@ Route::get('/dashboard', [function () {
     return view('dashboard.dashboard');
 }])
     ->middleware('auth');
-    
+
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::resource('users', 'UsersController');
     Route::get('users/{id}/destroy', [
@@ -85,19 +86,19 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
         'store'
     ])->name('images.store');
     Route::get('images/generals', /*[
-        'uses' =>*/[ImagesController::class,'indexGenerals']/*,
+        'uses' =>*/ [ImagesController::class, 'indexGenerals']/*,
         'as' => 'images.indexGenerals'
     ]*/)->name('images.indexGenerals');
 
     //Ruta categoriesWork
-    Route::Resource('categoriesWork', 'Work\CategoriesWorkController::class');
+    Route::Resource('categoriesWork', CategoriesWorkController::class);
     Route::get(
         'categoriesWork/{id}/destroy',
         [
-            'uses' => 'Work\CategoriesWorkController@destroy',
-            'as' => 'categoriesWork.destroy'
+            CategoriesWorkController::class,
+            'destroy'
         ]
-    );
+    )->name('categoriesWork.destroy');
 
     Route::Resource('works', WorksController::class);
     Route::get(
@@ -187,7 +188,7 @@ Route::post('/send', [
     'uses' => 'Auth\LoginController@logout', 'as' => 'dashboard.logout'])->name('logout');*/
 
 Route::get('/logout', [
-    LoginController::class, 
+    LoginController::class,
     'logout'
 ])->name('logout');
 

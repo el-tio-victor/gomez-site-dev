@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\CategoryRequest;
-use App\Category;
+use App\Models\Category;
 use Laracasts\Flash\Flash;
 
 class CategoriesController extends Controller
@@ -16,9 +16,9 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = Category::orderBy('id','ASC')->paginate(3);
-        return view('dashboard.blog.categories.index')->with('categories',$categories)
-        ->with('category_edit',null);
+        $categories = Category::orderBy('id', 'ASC')->paginate(3);
+        return view('dashboard.blog.categories.index')->with('categories', $categories)
+            ->with('category_edit', null);
     }
 
     /**
@@ -39,9 +39,9 @@ class CategoriesController extends Controller
      */
     public function store(CategoryRequest $r)
     {
-        $category=new Category($r->all());
+        $category = new Category($r->all());
         $category->save();
-        flash('La categoria '.$category->name.' fue creada con exito')->success();
+        flash('La categoria ' . $category->name . ' fue creada con exito')->success();
         return redirect()->route('categories.index');
     }
 
@@ -64,10 +64,10 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        $categories = Category::orderBy('id','ASC')->paginate(3);
-        $category=Category::find($id);
-        return view('dashboard.blog.categories.index')->with('category_edit',$category)
-        ->with('categories',$categories);
+        $categories = Category::orderBy('id', 'ASC')->paginate(3);
+        $category = Category::find($id);
+        return view('dashboard.blog.categories.index')->with('category_edit', $category)
+            ->with('categories', $categories);
     }
 
     /**
@@ -79,7 +79,7 @@ class CategoriesController extends Controller
      */
     public function update(CategoryRequest $request, $id)
     {
-        $category= Category::find($id);
+        $category = Category::find($id);
         $category->fill($request->all());
         $category->save();
         flash('Categoria actualizada')->success();
@@ -97,7 +97,7 @@ class CategoriesController extends Controller
         $category = Category::find($id);
         $category->delete();
 
-        flash('La categoria '.$category->name.' fue eliminada')->success();
+        flash('La categoria ' . $category->name . ' fue eliminada')->success();
         return redirect()->route('categories.index');
     }
 }

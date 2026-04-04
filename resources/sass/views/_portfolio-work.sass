@@ -1,6 +1,7 @@
 // Variables
 $image-size: 200px
 $gap-size: 1rem
+$naranja-claro: #eb7b07
 $breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default
 
 .color-naranja 
@@ -26,7 +27,18 @@ $img_margin: .7rem
 .link svg
     transition : .3s .2s ease-in-out
     
+main
+    background-image: url('/images/page/bg-pixel-down.svg')
+    background-size: 100%
+    background-position: top 
+    background-repeat: no-repeat
 
+.header-main 
+    background-color: $naranja
+    background-image: url('/images/page/bg-pixel.svg')
+    background-size: 100%
+    background-position: bottom 
+    background-repeat: no-repeat
 
 .header-intro
     z-index:    2
@@ -40,17 +52,31 @@ $img_margin: .7rem
 .header-main-wrapper
     height: auto!important
 
+.badge-category
+    color: white
+    border-radius: 0
+
 .work-title
     margin: 8rem auto 5rem auto
+
+.work-title .title
     color: white
     font-weight: 400
     background-color: black
     display: block
     content: ''
 
+.work-detail
+    padding: 0 0 0 10px
+
+@media all and (min-width: map-get($breakpoints, 'large'))
+    .work-detail
+        padding: 0 0 0 25px
+
 @media all and (min-width: map-get($breakpoints, 'medium'))
     .work-title
         margin: 15rem auto 10rem auto
+
 
 .icon-cursor
     display: inline-block
@@ -59,16 +85,19 @@ $img_margin: .7rem
     background-color: $naranja
 
 .work_image_main
-    position: absolute
-    top: 0
-    width: 100vw
-    height: 100vh
-    left: 0
-    border: solid $img_margin white
-    z-index: 2
+    border: solid 5.5px white
 
 .work-info
     padding:6rem 0
+
+
+@media all and (min-width: map-get($breakpoints, 'medium'))
+    .work-info
+        padding: 11rem 0
+
+@media all and (min-width: map-get($breakpoints, 'large'))
+    .work-info
+        padding: 17rem 0
 
 .work-techs ul
     list-style: none
@@ -90,25 +119,26 @@ $img_margin: .7rem
 @media all and (min-width: map-get($breakpoints, 'large'))
     .work-techs 
         ul 
-            padding-inline-start: 45px
+            padding-inline-start: 15px
 
 .work-techs
     /*background-color: #eb7b07*/
     padding-bottom: 1.8rem
-    border-bottom: solid .45rem #eb7b07
+    /*border-bottom: solid .45rem #eb7b07*/
 
 .work-techs-item
-    font-size: 2.5rem
+    font-size: 2.15rem
     overflow-wrap: break-word
     position: relative
     padding-left: 35px
+    line-height: 1.95
 
 .work-techs-tool-container
     position: absolute
-    left: 25px
-    bottom: -5px
-    line-height: 0
-    padding: 10px 15px
+    left: 48px
+    bottom: -6px
+    line-height: .15
+    padding: 9px 15px
     border-left: solid .25rem #ea5106
 
 .work-techs-tool-item
@@ -121,9 +151,6 @@ $img_margin: .7rem
 
 
 @media(min-width: 768px)
-    .work-info
-        padding: 11rem 0
-    
     .btn-flat
         margin-bottom: 7rem
 
