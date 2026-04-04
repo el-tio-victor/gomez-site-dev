@@ -5106,6 +5106,21 @@ a.text-dark:hover, a.text-dark:focus {
   transition: 0.3s 0.2s ease-in-out;
 }
 
+main {
+  background-image: url("/images/page/bg-pixel-down.svg");
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.header-main {
+  background-color: #ea5106;
+  background-image: url("/images/page/bg-pixel.svg");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
 .header-intro {
   z-index: 2;
   margin: 0.7rem;
@@ -5120,8 +5135,16 @@ a.text-dark:hover, a.text-dark:focus {
   height: auto !important;
 }
 
+.badge-category {
+  color: white;
+  border-radius: 0;
+}
+
 .work-title {
   margin: 8rem auto 5rem auto;
+}
+
+.work-title .title {
   color: white;
   font-weight: 400;
   background-color: black;
@@ -5129,6 +5152,15 @@ a.text-dark:hover, a.text-dark:focus {
   content: "";
 }
 
+.work-detail {
+  padding: 0 0 0 10px;
+}
+
+@media all and (min-width: 1024px) {
+  .work-detail {
+    padding: 0 0 0 25px;
+  }
+}
 @media all and (min-width: 768px) {
   .work-title {
     margin: 15rem auto 10rem auto;
@@ -5142,19 +5174,23 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .work_image_main {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  border: solid 0.7rem white;
-  z-index: 2;
+  border: solid 5.5px white;
 }
 
 .work-info {
   padding: 6rem 0;
 }
 
+@media all and (min-width: 768px) {
+  .work-info {
+    padding: 11rem 0;
+  }
+}
+@media all and (min-width: 1024px) {
+  .work-info {
+    padding: 17rem 0;
+  }
+}
 .work-techs ul {
   list-style: none;
 }
@@ -5175,28 +5211,29 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media all and (min-width: 1024px) {
   .work-techs ul {
-    padding-inline-start: 45px;
+    padding-inline-start: 15px;
   }
 }
 .work-techs {
   /*background-color: #eb7b07*/
   padding-bottom: 1.8rem;
-  border-bottom: solid 0.45rem #eb7b07;
+  /*border-bottom: solid .45rem #eb7b07*/
 }
 
 .work-techs-item {
-  font-size: 2.5rem;
+  font-size: 2.15rem;
   overflow-wrap: break-word;
   position: relative;
   padding-left: 35px;
+  line-height: 1.95;
 }
 
 .work-techs-tool-container {
   position: absolute;
-  left: 25px;
-  bottom: -5px;
-  line-height: 0;
-  padding: 10px 15px;
+  left: 48px;
+  bottom: -6px;
+  line-height: 0.15;
+  padding: 9px 15px;
   border-left: solid 0.25rem #ea5106;
 }
 
@@ -5211,9 +5248,6 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (min-width: 768px) {
-  .work-info {
-    padding: 11rem 0;
-  }
   .btn-flat {
     margin-bottom: 7rem;
   }

@@ -3,7 +3,7 @@
 {!!Form::open(['method'=>'POST', 'route'=>$route ])!!}
 	{!! Form::label($name_input,$label_text) !!}
 	<div class='input-group input-group-sm'>
-		{!! Form::text($name_input, $val ,['class'=>'form-control '.EnvatoHtml::invalidInput($errors->get($name_input)),'placeholder'=>$placeholder,'required','required']) !!}
+		{!! Form::text($name_input, $val ,['class'=>'form-control '.MyHelpers::invalidInput($errors->get($name_input)),'placeholder'=>$placeholder,'required','required']) !!}
 		@include('dashboard.partials._errors-form',['errors',$errors,'name'=> $name_input])
 		<span class="input-group-append">
             

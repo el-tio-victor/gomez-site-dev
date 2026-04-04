@@ -8,7 +8,7 @@
 
 @section('header')
         @component('site.partials._header')
-            <div class='header-intr d-flex flex-column align-items-center justify-content-center'>
+            <div class='header-intr pt-5 pb-5 d-flex flex-column align-items-center justify-content-center'>
                 <img class='col-10 col-sm-8 col-md-6 col-lg-5 header-intr_img' src="{{asset('images/page/shape1.svg')}}" alt="">
                 <h1 class='text-center title-portfolio'>
                     Echa un vistazo a mis proyectos
