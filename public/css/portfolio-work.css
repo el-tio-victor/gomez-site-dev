@@ -5178,17 +5178,17 @@ main {
 }
 
 .work-info {
-  padding: 6rem 0;
+  padding: 6rem 0 4rem 0;
 }
 
 @media all and (min-width: 768px) {
   .work-info {
-    padding: 11rem 0;
+    padding: 11rem 0 6rem 0;
   }
 }
 @media all and (min-width: 1024px) {
   .work-info {
-    padding: 17rem 0;
+    padding: 17rem 0 6rem 0;
   }
 }
 .work-techs ul {
