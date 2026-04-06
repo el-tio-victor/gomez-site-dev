@@ -11,11 +11,34 @@
 @mixin translateY($y) 
   @include transform(translateY($y))
 
+/*.item-work.large 
+  &, .text
+    background-color: $naranja !important
+
+  & .title
+    color: white!important
+
+  & .btn-flat
+        border-color: white // El borde ahora es blanco
+        
+        .btn-text
+            color: white // El texto inicial es blanco
+
+        &:after
+            background: white // La caja que sube será blanca
+
+  &:hover
+      .btn-flat
+          // Aplicamos el mixin pero pasando el color naranja
+          @include btn-flat-active($naranja)*/
+.item-work.large
+  min-height: 470px
 
 .item-work
   min-height: 385px
   position: relative
-  /*outline: solid 3px #ea51068c*/
+  outline: solid 3px $naranja
+  overflow: hidden
 
   &:hover
     .btn-flat
@@ -25,15 +48,13 @@
     width: 100%
     min-height: 150px
 
-  @include media-breakpoint-up(sm)   
-    &.item-work.item-up
-      @include translateY(-144px)
+  
     
     & .text
       min-height: 170px
 
 @include media-breakpoint-up(lg)   
-  .item-work
+  .item-work:not(.large)
     width: 400px
   
   
@@ -41,7 +62,6 @@
 
 .title
   font-weight: 100
-  color: #666
   text-transform: uppercase
   font-size: 1.75rem
   line-height: 1

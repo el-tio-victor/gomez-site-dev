@@ -2,10 +2,9 @@
 @if( $index == 0 )
 
 <div class="  p-0 col-12">
-    <div class="pl-2 col-12 d-lg-flex  pb-2 pr-3
-        justify-content-end  col-sm-6  ">
+    <div class="pl-2 col-12   pb-2 pr-3 ">
         @if($work_slug) <a href="{{route('portfolio.work',$work_slug)}}">@endif
-            <div class=" item-work d-flex border">
+            <div class=" item-work large d-flex ">
                 @component('site.portfolio.partials._work_content')
                 @slot('title',$title)
                 @slot('services', $services)
@@ -31,7 +30,7 @@
  col-12 col-sm-6  pl-2 pr-3 pb-2 pt-3">
     <div
         class="pb-0  d-flex justify-content-end flex-column  @if(($index + 1) % 2 != 0)  item-up @endif 
-      bg-white border p-0  item-work">
+      bg-white  p-0  item-work">
         @if($work_slug) <a href="{{route('portfolio.work',$work_slug)}}">@endif
             @component('site.portfolio.partials._work_content')
             @slot('title',$title)

@@ -1,7 +1,9 @@
-@mixin btn-flat-active
-    color: white
+@mixin btn-flat-active($color:white)
+    color: $color!important
     &::after
         top: 0
+    .btn-text // Forzamos que el texto interno también cambie
+        color: $color !important
 
 .btn-flat
     width: 16rem

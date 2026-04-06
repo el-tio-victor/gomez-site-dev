@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -756,10 +757,13 @@ ul.pagination {
   content: "";
 }
 .btn-flat:hover {
-  color: white;
+  color: white !important;
 }
 .btn-flat:hover::after {
   top: 0;
+}
+.btn-flat:hover .btn-text {
+  color: white !important;
 }
 
 .align-baseline {
@@ -5183,38 +5187,59 @@ a.text-dark:hover, a.text-dark:focus {
   color: #ea5106;
 }
 
+/*.item-work.large 
+ * &, .text
+ *  background-color: $naranja !important
+ *
+ * & .title
+ *  color: white!important
+ *
+ * & .btn-flat
+ *      border-color: white // El borde ahora es blanco
+ *      .btn-text
+ *          color: white // El texto inicial es blanco
+ *
+ *      &:after
+ *          background: white // La caja que sube será blanca
+ *
+ * &:hover
+ *    .btn-flat
+ *        // Aplicamos el mixin pero pasando el color naranja
+ *        @include btn-flat-active($naranja)*/
+.item-work.large {
+  min-height: 470px;
+}
+
 .item-work {
   min-height: 385px;
   position: relative;
-  /*outline: solid 3px #ea51068c*/
+  outline: solid 3px #ea5106;
+  overflow: hidden;
 }
 .item-work:hover .btn-flat {
-  color: white;
+  color: white !important;
 }
 .item-work:hover .btn-flat::after {
   top: 0;
+}
+.item-work:hover .btn-flat .btn-text {
+  color: white !important;
 }
 .item-work .text {
   width: 100%;
   min-height: 150px;
 }
-@media (min-width: 576px) {
-  .item-work.item-work.item-up {
-    transform: translateY(-144px);
-  }
-  .item-work .text {
-    min-height: 170px;
-  }
+.item-work .text .text {
+  min-height: 170px;
 }
 
 @media (min-width: 992px) {
-  .item-work {
+  .item-work:not(.large) {
     width: 400px;
   }
 }
 .title {
   font-weight: 100;
-  color: #666;
   text-transform: uppercase;
   font-size: 1.75rem;
   line-height: 1;

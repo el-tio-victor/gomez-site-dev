@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div class="col-12 mb-2 p-0 d-flex flex-column 
+<div class="col-12 mb-2 mb-lg-0 p-0 d-flex flex-column 
         justify-content-end align-items-start wrapper-text">
     <div class="p-md-2 bg-white  text">
         <div class=" p-2">
