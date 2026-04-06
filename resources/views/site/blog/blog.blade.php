@@ -17,7 +17,7 @@
 
 @section('header')
         @component('site.partials._header')
-            <div class='header-itro'>
+            <div class='pt-5 pb-5'>
                 <img class='col-10 col-sm-8 col-md-6 col-lg-5 header-intr_img' src="{{asset('images/page/shape1.svg')}}" alt="">
                 <h1 class='title-blog'>Algunas notas</h1>
             </div>
@@ -33,7 +33,7 @@
             $quantity_by_group = 3;
             $open_section = false;
         @endphp
-        <section class=' container-fluid d-flex  flex-wrap flex-row justify-content-between align-items-stretch mt-3 mb-3'> 
+        <section class='mt-5 pt-3 container-fluid d-flex  flex-wrap flex-row justify-content-between align-items-stretch mt-3 mb-3'> 
         @foreach($articles as $article)
 
             
