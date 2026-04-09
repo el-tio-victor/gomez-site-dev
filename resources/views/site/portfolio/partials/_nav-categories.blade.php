@@ -19,7 +19,7 @@
       }      		
     @endphp
   <li class='nav-item'> 
-    <a href="{{route('portafolio.search.work',$cat->categoryWork_slug)}}" class=" nav-link {{ $class_active }}">
+    <a href="{{route('portafolio.search.work',$cat->categoryWork_slug ?? '')}}" class=" nav-link {{ $class_active }}">
       {{ $cat->categoryWork_name === 'PEN' ? 'PENS' : $cat->categoryWork_name }}
     </a>
   </li>

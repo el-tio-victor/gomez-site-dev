@@ -30,7 +30,28 @@ main
             right: -350px
             top: 20%
 
-  
+
+.header-intro h1
+    line-height: 1.01
+    font-size: 18vw
+    color: #fff
+    position: relative
+    text-shadow: 10px 0 #ea5106, -2px 0 #ea5106, 0 2px #ea5106, 0 -2px #ea5106
+    text-transform: uppercase
+
+    & .last::after
+        content: ''
+        width: 5vw
+        height: 7.7vw
+        background-color: #fff
+        display: block
+        position: absolute
+        box-shadow: 10px 0 #ea5106, -2px 0 #ea5106, 0 2px #ea5106, 0 -2px #ea5106
+        right: 0
+        bottom: 3vw
+
+    
+
 .header-main
     position: relative
     z-index: 6
@@ -53,7 +74,6 @@ main
     font-weight: 100
     margin: -20px 0 0 
 
-.header-intro h2 .social,
 .header-intro h2 span
     color: $naranja 
 
@@ -63,26 +83,19 @@ section.about
     overflow-y: hidden
 
 .about-me 
-    padding: 6rem 0 2rem 0
+    padding: 3rem 2rem 10rem 2rem 
     position: relative
 
-    
 
-    
-    & &-wrapper
-        margin-left: -300px
-
-    @include media-breakpoint-up(md)   
-        & &-wrapper
-            margin-left: inherit
+   
 	
 .subt
     font-size: 12.25vw
     color: white
     position: relative
     text-shadow: 6px 0 #ea5106, -1px 0 #ea5106,0 1px #ea5106,0 -1px #ea5106
-    letter-spacing: 10px
-    line-height: 72px
+    letter-spacing: 3.74px
+    line-height: 1.2
 
 @include media-breakpoint-up(md)   
     .subt
@@ -127,7 +140,7 @@ section.about
 .skill
     flex-basis: inherit !important
     min-height: 80px
-    font-size: 5vw
+    font-size: 10vw
 
 main, .about, .works
     position: relative
@@ -142,6 +155,9 @@ main, .about, .works
     position: absolute
     top:-20px
     width: 230px
+
+.works .btn-flat
+    margin-top: 3rem
 
 
 
@@ -163,9 +179,6 @@ main, .about, .works
         padding: 11rem 0 6rem  0
     .worksit
         padding-top: 4rem 
-    .about-img
-        position: relative
-        top: -9.7rem
     .about-skills .subt,
     .works-header .subt 
         transform: translate(-10px,10px)
@@ -178,8 +191,7 @@ main, .about, .works
     section.about .about-me-text
         font-size: 1.24rem
 
-    .subt
-        line-height: .9
+    
 
 
     

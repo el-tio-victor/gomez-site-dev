@@ -5211,6 +5211,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .item-work {
+  box-shadow: 8px 6px #ea5106;
   min-height: 385px;
   position: relative;
   outline: solid 3px #ea5106;

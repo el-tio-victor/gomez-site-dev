@@ -32,7 +32,7 @@ const path = require("path");
 //mix.sass('resources/sass/portfolio-work.sass','public/css')
 //mix.sass('resources/sass/bootstrap.sass', 'public/css');
 mix
-  .sass("resources/sass/portfolio.sass", "public/css", {
+  .sass("resources/sass/main.sass", "public/css", {
     sassOptions: {
       // Esto permite que @import "vendors/..." funcione desde cualquier subcarpeta
       includePaths: [
