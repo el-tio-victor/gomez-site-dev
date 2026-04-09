@@ -9,7 +9,7 @@ if( ! isset( $class_header_video ) ) $class_header_video = '';
 <header class=' header-main'>
         @component('site.partials._nav-main')
         @endcomponent
-        <section class="container-fluid  d-flex {{$class.' '.$class_header_video}} heade-main-wrapper  ">
+        <section class="container-fluid  d-flex {{$class.' '.$class_header_video}} header-main-wrapper  ">
             {{$slot}}
         </section>
         

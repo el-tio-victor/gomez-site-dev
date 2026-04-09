@@ -5,7 +5,7 @@
     if( !isset( $style ) )
         $style = '' ;
 @endphp
-<div class="{{$class}}  text-right social" style="{{$style}}">
+<div class="{{$class}}  text-center social" style="{{$style}}">
    <a class='link-hover-black' target='_blank' href='https://www.linkedin.com/in/victor-gomez-45981a14a'>
       <i class='icon-linkedin'></i>
    </a>

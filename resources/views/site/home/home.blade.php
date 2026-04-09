@@ -11,9 +11,15 @@
 @component('site.partials._header')
 
 <div class='header-intro'>
-    <h1>Gomez-Site</h1>
-    <h2 class=' d-flex flex-column'>
-        <div class='text-right'><span>by</span> víctor gómez</div>
+    <h1>
+        <div class="d-flex flex-column">
+            <span class=""> Victor </span>
+            <span> Manuel </span>
+            <span class="position-relative last">Gómez </span>
+        </div>
+    </h1>
+    <h2 class=' d-flex flex-column mt-2'>
+        <div class='text-center'><small>gomez-site.mx</small></div>
         @include('site.partials._social-links', ['class'=>'pr-3'])
     </h2>
 
@@ -22,18 +28,18 @@
 @endsection
 
 @section('content')
-<img class="img-roll" src="{{asset('/images/page/shape.svg')}}" alt="">
 <section class="about">
     <div class=" container about-me">
 
-        <div class=' position-relative d-flex justify-content-center  flex-row align-items-center '>
-            <img class='about-img ' src="{{asset('/images/page/pintura.svg')}}" alt="">
-            <div class='position-relative pr-5 col-12 col-md-6 col-lg-5 mb-md-5 about-me-wrapper '>
-                <h2 class='subt'>¿Qué cosa es víctor?</h2>
-                <p class=' mt-4 pr-4 about-me-text '>
-                    Desarrollador web, entusiasta del diseño y apacionado de la programación.
-                    Fiel creyente de que las cosas bien hechas son las mejores
-                    y las que sobresalen del resto.
+        <div class=' position-relative d-flex justify-content-center  flex-column flex-md-row align-items-center '>
+            <img class='about-img ' src="{{asset('/images/page/face.svg')}}" alt="">
+            <div class='position-relative pr-3 pr-sm-5 pl-3 pl-sm-5 pl-md-4 col-12 col-md-6 col-lg-5 mb-md-5 about-me-wrapper '>
+                <h2 class='subt'>Algo sobre mi...</h2>
+                <p class=' mt-4  about-me-text '>
+                    Soy desarrollador de software y creo herramientas tecnológicas que optimizan 
+                    procesos y facilitan el día a día de personas y empresas.
+                    <span role="img" aria-label="Alert">‼️</span> No soy dieñador pero tengo una fuerte debilidad, por el como se ven mis 
+                    desarrollos. 
                 </p>
             </div>
 
@@ -42,11 +48,10 @@
     </div>
     <div class="about-skills  mb-5 container">
         <div class="position-relative">
-            <img class="about-skill_img_tit" src="{{asset('/images/page/shape1.svg')}}" alt="">
-            <h2 class='col-12 col-md-6 col-lg-5 mt-5 mb-5 subt'>Y sus habilidades</h2>
+            <h2 class='col-12 col-md-6 col-lg-5 mt-5 mb-5 subt'>Mis habilidades</h2>
         </div>
         <div class="margin-top-bott-elem skills-wrapper">
-            <div class="d-flex flex-column flex-sm-row  justify-content-around skills1">
+            <div class="d-flex flex-wrap flex-column flex-sm-row  justify-content-around skills1">
                 <div class=' d-flex justify-content-center align-items-center mr-lg-5 skill'>
                     <h3>HTML</h3>
                 </div>
@@ -69,19 +74,17 @@
         </div>
     </div>
 
-    <div class="container   about-footer">
-    </div>
+    
 </section>
 <section class='position-relative works '>
 
-    <img class="works_img_bg" src="{{asset('/images/page/shape2.svg')}}" alt="">
-    <header class=" container-fluid pb-4 bg-white works-header">
-        <h2 class='pt-md-5 ml-5  mb-5 pb-5 subt'>Últimos <br> proyectos</h2>
+    <header class=" container-fluid  bg-white works-header">
+        <h2 class='pt-md-3 ml-5  mb-5  subt'>Últimos <br> proyectos</h2>
         <!--<div class="margin-top-bott-elem d-flex  flex-column  justify-content-center align-items-center works-intro">
                 <div class='m-0 text-center'><p>Estos son los últimos  de mis proyectos desarrollados.</p></div>
             </div>-->
     </header>
-    <section class='col-12 p-0  works-contain bg-white mt-5 mb-4 pt-5 pb-5
+    <section class='col-12 pl-3 pr-3  works-contain bg-white mt-5 mb-4 pt-5 pb-2
             container-fluid d-flex flex-wrap   justify-content-center align-items-center'>
         @include('site.home.partials.contentWorks')
     </section>
