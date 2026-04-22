@@ -4,7 +4,7 @@
 <div class="  p-0 col-12">
     <div class="pl-2 col-lg-11 col-xl-9 m-auto col-12   pb-2 pr-3 ">
         @if($work_slug) <a href="{{route('portfolio.work',$work_slug)}}">@endif
-            <div class="border item-work large d-flex ">
+            <div class="border item-work large  ">
                 @component('site.portfolio.partials._work_content')
                 @slot('title',$title)
                 @slot('services', $services)
@@ -29,7 +29,7 @@
  @else justify-content-end   @endif
  col-12 col-sm-6  pl-2 pr-3 pb-2 pt-3">
     <div
-        class="pb-0  d-flex justify-content-end flex-column  @if(($index + 1) % 2 != 0)  item-up @endif 
+        class="pb-0    @if(($index + 1) % 2 != 0)  item-up @endif 
       bg-white  p-0  item-work">
         @if($work_slug) <a href="{{route('portfolio.work',$work_slug)}}">@endif
             @component('site.portfolio.partials._work_content')
