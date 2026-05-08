@@ -4,14 +4,14 @@
             <a class="nav-link dropdown-toggle link-sub-blog" data-toggle="collapse" href="#categoriesCollapse" role="button" aria-expanded="false" aria-controls="categoriesCollapse">CATEGORÍAS</a>
             @if(isset($filter))
                 @if($filter->all()['filter']=='category')
-                    <strong class='d-flex align-items-end p-1 current-category'>
+                    <strong class='d-flex align-items-end p-3 current-category'>
                        
                         {{$filter->all()['category_name']}}
                          <a href="{{route('blog')}}">
                             <span 
                                 class="ml-3 d-flex align-items-center justify-content-center rounded-circle
-                                align-items-center bg-danger text-white btn-clear-category">
-                                x
+                                align-items-center bg-white border text-danger btn-clear-category">
+                                <span aria-hidden="true">&times;</span>
                             </span>
                         </a>
                     </strong>
@@ -22,14 +22,14 @@
             <a class="nav-link dropdown-toggle link-sub-blog" data-toggle="collapse" href="#tagsCollapse" role="button" aria-expanded="false" aria-controls="tagsCollapse">TAGS</a>
             @if(isset($filter))
                 @if($filter->all()['filter']=='tag')
-                    <strong class='d-flex align-items-end p-1 current-tag'>
+                    <strong class='d-flex align-items-end p-3 current-tag'>
                         
                         {{$filter->all()['tag_name']}}
                         <a href="{{route('blog')}}">
                             <span 
                                 class="ml-3 d-flex align-items-center rounded-circle
-                                align-items-center bg-danger text-white btn-clear-tag">
-                                x
+                                justify-content-center bg-white border text-danger btn-clear-tag">
+                                <span aria-hidden="true">&times;</span>
                             </span>
                         </a>
                     </strong>
