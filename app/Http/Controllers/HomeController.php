@@ -31,12 +31,12 @@ class HomeController extends Controller
     public function index()
     {
         if (auth()->user() == null)
-            $articles = Article::where('status', 'published')->orderBy('id', 'desc')->simplePaginate(9);
+            $articles = Article::where('status', 'published')->orderBy('id', 'desc')->paginate(9);
         else
             $articles = Article::where('status', 'published')->orWhere([
                 ['status', '=', 'edited'],
                 ['user_id', '=', auth()->user()->id]
-            ])->orderBy('id', 'desc')->simplePaginate(9);
+            ])->orderBy('id', 'desc')->paginate(9);
         $filter = collect(['filter' => 'all']);
 
         return view('site.blog.blog')
@@ -52,7 +52,7 @@ class HomeController extends Controller
         ->leftJoin('categories','categories.id','=','articles.category_id')
 	->simplePaginate(4);*/
         //dd(\App\Category::findBySlug($slug)->name  );
-        $articles = $category->articles()->orderBy('id', 'DESC')->simplePaginate(4);
+        $articles = $category->articles()->orderBy('id', 'DESC')->paginate(4);
         $category_name = \App\Models\Category::findBySlug($slug)->name;
 
         $filter = collect(['filter' => 'category', 'category_name' => $category_name]);
@@ -68,7 +68,7 @@ class HomeController extends Controller
         //$tag = \App\Tag::where('category_id',$id)->get();
         $tags = \App\Models\Tag::where('tag_slug', '=', $slug)->first();
         $tag_name = $tags->name;
-        $articles = $tags->articles()->orderBy('id', 'DESC')->simplePaginate(4);
+        $articles = $tags->articles()->orderBy('id', 'DESC')->paginate(4);
 
         $filter = collect(['filter' => 'tag', 'tag_name' => $tag_name]);
 

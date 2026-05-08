@@ -1,4 +1,4 @@
-<div class="cont-work-img">
+<div class="text-center cont-work-img">
     <div class="elements">
         @foreach($images as $image)
         @if( MyHelpers::typeFile($image->name ) === 'image' )

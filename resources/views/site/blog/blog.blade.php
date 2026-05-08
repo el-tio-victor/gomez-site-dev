@@ -64,7 +64,7 @@
 		@component('site.partials._no-results')@endcomponent
 		</div>
 	@endif
-        <section class=" pt-5 pb-5 d-flex justify-content-center articles-paginate">
+        <section class="mt-5 pt-5 pb-5 d-flex justify-content-center articles-paginate">
         {{$articles->links()}}
     </section>
     </section>

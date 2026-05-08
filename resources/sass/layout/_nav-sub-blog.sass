@@ -17,3 +17,20 @@
     transition: all .3s ease-out
     background: white
     color: black !important    
+.categories-nav .nav-item:hover
+  background: initial !important
+  color: initial!important
+  transition: all .4s ease
+
+.current-category, .current-tag
+    position: relative
+
+    &:after 
+        position: absolute
+        left: 5px
+        top: 15px
+        content:  ''
+        display: block
+        width: 6px
+        height: 1.7rem
+        background-color: $naranja

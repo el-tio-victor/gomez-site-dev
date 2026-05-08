@@ -2,7 +2,7 @@
 
 @section('css')
 <!--<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">-->
-<link rel="stylesheet" href="{{asset('/css/main.css')}}">
+<link rel="stylesheet" href="{{asset(MyHelpers::versionAuto('/css/main.css'))}}">
 @endsection
 
 @section('title','Inicio')
