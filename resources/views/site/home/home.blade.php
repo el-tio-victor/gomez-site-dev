@@ -13,8 +13,8 @@
 <div class='header-intro'>
     <h1>
         <div class="d-flex flex-column">
-            <span class=""> Victor </span>
-            <span> Manuel </span>
+            <span class="item-name"> Victor </span>
+            <span class="item-name2"> Manuel </span>
             <span class="position-relative last">Gómez </span>
         </div>
     </h1>
@@ -37,7 +37,7 @@
                 <h2 class='subt'>Algo sobre mi...</h2>
                 <p class=' mt-4  about-me-text '>
                     Soy desarrollador de software y creo herramientas tecnológicas que optimizan 
-                    procesos y facilitan el día a día de personas y empresas.
+                    procesos y facilitan el día a día de personas y empresas en la ciudad de Puebla México.
                     <span role="img" aria-label="Alert">‼️</span> No soy dieñador pero tengo una fuerte debilidad, por el como se ven mis 
                     desarrollos. 
                 </p>
@@ -78,19 +78,19 @@
 </section>
 <section class='position-relative works '>
 
-    <header class=" container-fluid  bg-white works-header">
+    <header class="pt-5 container  bg-white works-header">
         <h2 class='pt-md-3 ml-5  mb-5  subt'>Últimos <br> proyectos</h2>
         <!--<div class="margin-top-bott-elem d-flex  flex-column  justify-content-center align-items-center works-intro">
                 <div class='m-0 text-center'><p>Estos son los últimos  de mis proyectos desarrollados.</p></div>
             </div>-->
     </header>
-    <section class='col-12 pl-3 pr-3  works-contain bg-white mt-5 mb-4 pt-5 pb-2
-            container-fluid d-flex flex-wrap   justify-content-center align-items-center'>
+    <section class=' pl-3 pr-3  works-contain bg-white mt-5 mb-4 pt-5 pb-2
+            container col-9 col-lg-7 col-xl-5 d-flex flex-wrap   justify-content-center align-items-center'>
         @include('site.home.partials.contentWorks')
     </section>
-    <div class="pt-5 pb-5 d-flex align-items-center justify-content-center bg-white">
+    <div class="pt-5 pb-5 mt-5 mb-5 d-flex align-items-center justify-content-center bg-white">
         <a href="{{route('portfolio')}}">
-            <div class=" d-flex align-items-center justify-content-center btn-flat">
+            <div class=" d-flex align-items-center justify-content-center">
                 <span class='btn-text'>VER PORTAFOLIO</span>
             </div>
         </a>

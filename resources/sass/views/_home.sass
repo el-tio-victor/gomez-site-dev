@@ -34,27 +34,35 @@ main
 .item-work:not(.large)
     width:100%!important
 
-.pre-footer
-    border-top: solid 5px $naranja
 
 .header-intro h1
     line-height: 1.01
-    font-size: 18vw
+    font-size: 16vw
     color: #fff
     position: relative
     text-shadow: 10px 0 #ea5106, -2px 0 #ea5106, 0 2px #ea5106, 0 -2px #ea5106
     text-transform: uppercase
 
-    & .last::after
-        content: ''
-        width: 5vw
-        height: 7.7vw
-        background-color: #fff
-        display: block
-        position: absolute
-        box-shadow: 10px 0 #ea5106, -2px 0 #ea5106, 0 2px #ea5106, 0 -2px #ea5106
-        right: 0
-        bottom: 3vw
+    @media (min-width: 1500px)
+        &
+            font-size: 14vw
+
+    & .item-name2 
+        background-color: #000
+        padding: 0 1vw
+    & .last
+        padding-top: 1.7vw
+
+        &::after
+            content: ''
+            width: 5vw
+            height: 7.7vw
+            background-color: #fff
+            display: block
+            position: absolute
+            box-shadow: 10px 0 #ea5106, -2px 0 #ea5106, 0 2px #ea5106, 0 -2px #ea5106
+            right: 0
+            bottom: 3vw
 
     
 
