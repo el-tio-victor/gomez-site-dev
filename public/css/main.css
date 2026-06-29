@@ -5033,6 +5033,11 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #ea5106;
 }
 
+body, html {
+  background-image: url("/images/page/bg.svg");
+  background-size: contain;
+}
+
 main {
   overflow-x: hidden;
 }
@@ -5187,7 +5192,6 @@ section.about {
 main, .about, .works {
   position: relative;
   z-index: 5;
-  background: white;
   color: #594e4e;
 }
 
