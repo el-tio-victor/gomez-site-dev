@@ -49,7 +49,6 @@
         @else
 	      @component('site.partials._no-results')@endcomponent
         @endif
-        @include('site.home.partials._svg-decline',['color'=>'#fff','class'=>''])
     </section>
     
 @endsection
