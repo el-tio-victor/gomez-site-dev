@@ -410,6 +410,11 @@ a {
   content: "\ea04";
 }
 
+body, html {
+  background-image: url("/images/page/bg.svg");
+  background-size: contain;
+}
+
 .badge {
   display: inline-block;
   padding: 0.25em 0.4em;
@@ -622,10 +627,13 @@ a.badge-dark:focus, a.badge-dark.focus {
   content: "";
 }
 .btn-flat:hover {
-  color: white;
+  color: white !important;
 }
 .btn-flat:hover::after {
   top: 0;
+}
+.btn-flat:hover .btn-text {
+  color: white !important;
 }
 
 .align-baseline {
@@ -5053,26 +5061,6 @@ a.text-dark:hover, a.text-dark:focus {
   height: 100vh;
 }
 
-.header-intro h1 {
-  font-size: 10vw;
-  font-weight: 100;
-}
-
-@media (min-width: 576px) {
-  .header-intro h1 {
-    font-size: 6vw;
-  }
-}
-@media (min-width: 768px) {
-  .header-intro h1 {
-    font-size: 5vw;
-  }
-}
-@media (min-width: 992px) {
-  .header-intro h1 {
-    font-size: 4vw;
-  }
-}
 .footer-main {
   color: #ea5106;
 }
@@ -5107,18 +5095,13 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 main {
-  background-image: url("/images/page/bg-pixel-down.svg");
-  background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
 }
 
 .header-main {
-  background-color: #ea5106;
-  background-image: url("/images/page/bg-pixel.svg");
-  background-size: 100%;
-  background-position: bottom;
-  background-repeat: no-repeat;
+  background: url("/images/page/bg.png") #ea5106;
+  background-repeat: repeat;
 }
 
 .header-intro {
@@ -5140,8 +5123,10 @@ main {
   border-radius: 0;
 }
 
-.work-title {
-  margin: 8rem auto 5rem auto;
+.wrapper-work-title {
+  min-height: 10rem;
+  margin: 3rem;
+  box-shadow: 0.4rem 0.5rem #c55a17;
 }
 
 .work-title .title {
@@ -5161,11 +5146,6 @@ main {
     padding: 0 0 0 25px;
   }
 }
-@media all and (min-width: 768px) {
-  .work-title {
-    margin: 15rem auto 10rem auto;
-  }
-}
 .icon-cursor {
   display: inline-block;
   width: 9px;
@@ -5174,7 +5154,8 @@ main {
 }
 
 .work_image_main {
-  border: solid 5.5px white;
+  border: solid 15px white;
+  box-shadow: 0.4rem 0.5rem #c55a17;
 }
 
 .work-info {
