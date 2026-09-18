@@ -108,10 +108,9 @@ class WorksController extends Controller
     public function show($id = null)
     {
         $categoriesWork  = CategoryWork::orderBy('categoryWork_name', 'ASC')->get();
-        $works = Work::orderBy('id', 'Desc')->paginate(6);
+        $works = Work::orderBy('id', 'Desc')->where('published', 1)->paginate(6);
         return view('site.portfolio.portfolio')
-            ->with('works', $works)->with('categoriesWork', $categoriesWork)
-        ;
+            ->with('works', $works)->with('categoriesWork', $categoriesWork);
     }
 
     /**
