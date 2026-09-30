@@ -15,7 +15,7 @@ class Work extends Model
     use SluggableScopeHelpers;
 
     protected $table = 'works';
-    protected $fillable = ['title', 'detail', 'url', 'id_categoryWork'];
+    protected $fillable = ['title', 'detail', 'url', 'id_categoryWork', 'published'];
 
     public function images(): BelongsToMany
     {

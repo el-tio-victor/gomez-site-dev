@@ -108,7 +108,10 @@ class WorksController extends Controller
     public function show($id = null)
     {
         $categoriesWork  = CategoryWork::orderBy('categoryWork_name', 'ASC')->get();
-        $works = Work::orderBy('id', 'Desc')->where('published', 1)->paginate(6);
+        if (auth()->user() == null)
+            $works = Work::orderBy('id', 'Desc')->where('published', 1)->paginate(6);
+        else
+            $works = Work::orderBy('id', 'Desc')->paginate(6);
         return view('site.portfolio.portfolio')
             ->with('works', $works)->with('categoriesWork', $categoriesWork);
     }
@@ -140,6 +143,7 @@ class WorksController extends Controller
     {
         $work = Work::find($id);
         $work->fill($request->all());
+        $work->published =  $request->has('published') ? 1 : 0;
         $work->save();
 
         $work->technologyTool()->sync($request->techs);

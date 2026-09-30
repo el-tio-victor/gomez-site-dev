@@ -104,10 +104,10 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get(
         'works/{id}/destroy',
         [
-            'uses' => 'Work\WorksController@destroy',
-            'as' => 'works.destroy'
+            WorksController::class,
+            'destroy'
         ]
-    );
+    )->name('works.destroy');
 
 
 
@@ -147,7 +147,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     );
 
     Route::get('techtool/list', [
-        'uses' => 'Work\TechToolController@list',
+        'uses' => 'App\Http\Controllers\Work\TechToolController@list',
         'as' => 'techtool.list'
     ]);
 });

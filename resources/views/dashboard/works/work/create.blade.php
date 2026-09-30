@@ -51,6 +51,13 @@
         @endslot
 
         @slot('body')
+
+         	<div class="form-group d-flex">
+                {!!Form::label('categoryWork_name','Publicado',['class'=>' col'])!!}
+           		<div class="select2-purple col-8">
+           			{!! Form::checkbox('published',old('published')) !!}
+           		</div>
+            </div>
          
          	<div class="form-group d-flex">
                 

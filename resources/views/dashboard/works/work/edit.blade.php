@@ -47,6 +47,18 @@
         @endslot
 
         @slot('body')
+
+         	<div class="form-group">
+           		<div class="custom-control custom-switch">
+                    {!! Form::checkbox(
+                        'published',
+                        '1',
+                        $work->published == 1 ,
+                        ['class' => 'custom-control-input', "id" => "published"]
+                    ) !!}
+                {!!Form::label('published','Publicado',['class'=>'custom-control-label'])!!}
+           		</div>
+            </div>
             
         	<div class="form-group">
            		{!!Form::label('categoryWork_name','Categoría',['class'=>' col'])!!}
@@ -109,7 +121,7 @@
 		$('document').ready(function(){
             $('.textarea').summernote({height:320})
             
-            $('.textarea').summernote('code', '{!!$work->detail!!}' )
+            //$('.textarea').summernote('code', {!! json_encode($work->detail) !!} )
 			//Cuando la pag esta lista hago una consulta ajax para saber la lista de tech
 			$.ajax({
 				url: '/dashboard/techtool/list',
