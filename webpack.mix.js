@@ -32,15 +32,15 @@ const path = require("path");
 //mix.sass('resources/sass/portfolio-work.sass','public/css')
 //mix.sass('resources/sass/bootstrap.sass', 'public/css');
 mix
-  .sass("resources/sass/blog-article.sass", "public/css", {
-    sassOptions: {
-      // Esto permite que @import "vendors/..." funcione desde cualquier subcarpeta
-      includePaths: [
-        path.resolve(__dirname, "resources/sass"),
-        path.resolve(__dirname, "resources/sass/vendors"),
-      ],
-    },
-  })
-  .options({
-    processCssUrls: false,
-  });
+    .sass("resources/sass/portfolio.sass", "public/css", {
+        sassOptions: {
+            // Esto permite que @import "vendors/..." funcione desde cualquier subcarpeta
+            includePaths: [
+                path.resolve(__dirname, "resources/sass"),
+                path.resolve(__dirname, "resources/sass/vendors"),
+            ],
+        },
+    })
+    .options({
+        processCssUrls: false,
+    });

@@ -108,12 +108,18 @@ class WorksController extends Controller
     public function show($id = null)
     {
         $categoriesWork  = CategoryWork::orderBy('categoryWork_name', 'ASC')->get();
+        $years = Work::selectRaw('YEAR(created_at) as year')
+            ->distinct()
+            ->orderBy('year', 'desc')
+            ->pluck('year');
+        //dd($years);
         if (auth()->user() == null)
             $works = Work::orderBy('id', 'Desc')->where('published', 1)->paginate(6);
         else
             $works = Work::orderBy('id', 'Desc')->paginate(6);
         return view('site.portfolio.portfolio')
-            ->with('works', $works)->with('categoriesWork', $categoriesWork);
+            ->with('works', $works)->with('categoriesWork', $categoriesWork)
+            ->with('years', $years);
     }
 
     /**

@@ -1,6 +1,9 @@
 @import 'layout/article-work'
 
 @import"layout/nav-sub"
+@import"layout/paginate-year-portfolio"
+
+$breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default
 
 
 .header-main-wrapper
@@ -13,4 +16,12 @@
     width: 320px
     top: -90px
     
+.portfolio-year-title
+    font-size: 8.5vw
+    color: white
+    letter-spacing: 3px
+    text-shadow: 1px 1px #ea5106, -1px 2px #ea5106, 1px -1px #ea5106, -1px -1px #ea5106
 
+@media all and (min-width: map-get($breakpoints, 'medium'))
+    .portfolio-year-title
+        font-size: 4.74vw

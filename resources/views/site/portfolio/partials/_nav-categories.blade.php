@@ -1,6 +1,8 @@
 <!--
     Sub vista con el nav de las categorías de los proyectos 
 -->
+<div class="pt-5 pb-5 mb-3 d-flex justify-content-center  bg-white nav-categories-wrapper">
+
 <nav class=' nav justify-content-around categories-nav'>
   {{-- En base a la variable slug determino si el item TODOS esta activo caso particular al ingresar
         a página desde otra pagina ( ver todos los proyectos )
@@ -25,3 +27,4 @@
   </li>
   @endforeach
 </nav>
+</div>
