@@ -105,21 +105,56 @@ class WorksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id = null)
+    public function show(Request $request, $id = null,)
     {
-        $categoriesWork  = CategoryWork::orderBy('categoryWork_name', 'ASC')->get();
+        $queryYear = $request->query('year');
+        $categoriesWork  = Work::join('categoriesWork', 'categoriesWork.id', '=', 'works.id_categoryWork')
+            ->orderBy('categoryWork_name', 'ASC')
+            ->distinct()
+            ->pluck('categoryWork_slug', 'categoryWork_name');
         $years = Work::selectRaw('YEAR(created_at) as year')
             ->distinct()
             ->orderBy('year', 'desc')
             ->pluck('year');
-        //dd($years);
+        //dd($queryYear);
+
+        $activeYear = $queryYear == null && count($years) > 0 ? $years[0] : $queryYear;
         if (auth()->user() == null)
-            $works = Work::orderBy('id', 'Desc')->where('published', 1)->paginate(6);
+            $works = Work::orderBy('id', 'Desc')
+                ->where('published', 1)
+                ->whereYear('created_at', $activeYear)
+                ->get();
         else
-            $works = Work::orderBy('id', 'Desc')->paginate(6);
+            $works = Work::orderBy('id', 'Desc')
+                ->whereYear('created_at', $activeYear)
+                ->get();
+
+
+
+
         return view('site.portfolio.portfolio')
             ->with('works', $works)->with('categoriesWork', $categoriesWork)
-            ->with('years', $years);
+            ->with('years', $years)
+            ->with('activeYear', $activeYear);
+    }
+
+    protected function getCategoriesWork()
+    {
+        return Work::join('categoriesWork', 'categoriesWork.id', '=', 'works.id_categoryWork')
+            ->orderBy('categoryWork_name', 'ASC')
+            ->distinct()
+            ->pluck('categoryWork_slug', 'categoryWork_name');
+    }
+
+    protected function getYearWork($id_categoryWork = null)
+    {
+        return Work::selectRaw('YEAR(created_at) as year')
+            ->distinct()
+            ->when($id_categoryWork, function ($query, $id_categoryWork) {
+                return $query->where('id_categoryWork', $id_categoryWork);
+            })
+            ->orderBy('year', 'desc')
+            ->pluck('year');
     }
 
     /**
@@ -132,6 +167,7 @@ class WorksController extends Controller
     {
         $work = Work::find($id);
         $categoryWork = CategoryWork::all()->pluck('categoryWork_name', 'id')->toArray();
+
         return view('dashboard.works.work.edit')
             ->with('work', $work)
             ->with('categoryWork', $categoryWork)
@@ -173,15 +209,29 @@ class WorksController extends Controller
         return redirect()->route('works.index');
     }
 
-    public function searchWorks($slug)
+    public function searchWorks(Request $request, $slug)
     {
-        $categoriesWork  = CategoryWork::orderBy('categoryWork_name', 'ASC')->get();
+        $queryYear = $request->query('year');
+
         $category = \App\Models\CategoryWork::where('categoryWork_slug', $slug)->first();
-        $works      = $category->work()->paginate(4);
+        $years = $this->getYearWork($category->id);
+        //dd($years);
+        $activeYear = $queryYear == null && count($years) > 0 ? $years[0] : $queryYear;
+        $categoriesWork  = Work::join('categoriesWork', 'categoriesWork.id', '=', 'works.id_categoryWork')
+            ->orderBy('categoryWork_name', 'ASC')
+            ->distinct()
+            ->pluck('categoryWork_slug', 'categoryWork_name');;
+
+        $works      = $category->work()
+            ->whereYear('created_at', $activeYear)->get();
+
+
 
         return view('site.portfolio.portfolio')
             ->with('works', $works)
             ->with('categoriesWork', $categoriesWork)
+            ->with('years', $years)
+            ->with('activeYear', $activeYear)
             ->with('slug', $slug);
     }
 

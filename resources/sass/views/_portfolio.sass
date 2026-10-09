@@ -20,7 +20,19 @@ $breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default
     font-size: 8.5vw
     color: white
     letter-spacing: 3px
-    text-shadow: 1px 1px #ea5106, -1px 2px #ea5106, 1px -1px #ea5106, -1px -1px #ea5106
+    text-shadow: 1px 1px $naranja, -1px 1px $naranja, 1px -1px $naranja, -1px -1px $naranja
+    display: inline-block
+    position: relative
+
+    &:after
+        position: absolute
+        width: 20px
+        height: 20px
+        content: ''
+        border: solid 1.9px $naranja
+        bottom: 10px
+        right:   -32px
+
 
 @media all and (min-width: map-get($breakpoints, 'medium'))
     .portfolio-year-title

@@ -25,7 +25,7 @@
 </section>
 
 @if(count($years) > 0 )
-    <div class="container"><h4 class="portfolio-year-title">{{ $years[0] }}</h4></div>
+    <div class="container"><h4 class="portfolio-year-title">{{ $activeYear }}</h4></div>
 @endif
 
 

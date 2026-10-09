@@ -1,4 +1,4 @@
-<nav class="d-flex pt-5 mt-5 mb-2  justify-content-center {{ Request::is('blog/*')? 'pt-5' : '' }} nav-categories-wrapper">
+<nav class="d-flex pt-3 mb-2  justify-content-center {{ Request::is('blog/*')? 'pt-5' : '' }} nav-categories-wrapper">
     <ul class="nav categories-nav">
         <li class="nav-item mr-3">
             <a class="nav-link dropdown-toggle link-sub-blog" data-toggle="collapse" href="#categoriesCollapse" role="button" aria-expanded="false" aria-controls="categoriesCollapse">CATEGORÍAS</a>

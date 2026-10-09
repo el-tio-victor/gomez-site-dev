@@ -2,7 +2,7 @@
 @if( $index == 0 )
 
 <div class="  p-0 col-12">
-    <div class="pl-2 col-lg-11 col-xl-9 m-auto col-12   pb-3 pr-3 ">
+    <div class="pl-2 col-lg-10 col-xl-7 m-auto col-12   pb-3 pr-3 ">
         @if($work_slug) <a href="{{route('portfolio.work',$work_slug)}}">@endif
             <div class="border item-work bg-white large  ">
                 @component('site.portfolio.partials._work_content')

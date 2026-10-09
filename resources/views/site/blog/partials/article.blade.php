@@ -1,5 +1,5 @@
 <div
-    <class="p-3 col-12 col-sm-6 col-lg-4 p-1   mr-auto ml-auto ml-sm-0 mr-sm-0  @if (($index + 1) % 2 === 0) item-up @endif ">
+    class="p-3 col-12 col-sm-6 col-lg-4 p-1   mr-auto ml-auto ml-sm-0 mr-sm-0  @if (($index + 1) % 2 === 0) item-up @endif ">
     <article class='d-flex flex-column m-auto  p-3 m-1  bg-white article'>
         <header class="article-header"></header>
         <section class="article-body">

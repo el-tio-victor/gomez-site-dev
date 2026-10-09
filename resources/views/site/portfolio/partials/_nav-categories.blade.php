@@ -12,19 +12,20 @@
     if( ! isset($slug)) $class_active = 'active'; 
    @endphp
   <li class='nav-item '><a href="{{route('portfolio')}}" class=" nav-link {{$class_active}}">TODOS</a></li>
-  @foreach($categoriesWork as $cat)
+  @foreach($categoriesWork as $cat => $cat_slug)
     @php
   	  $class_active = '';
  	  if(isset($slug)){
-        if($slug === $cat->categoryWork_slug)
+        if($slug === $cat_slug)
           $class_active = 'active';
       }      		
     @endphp
   <li class='nav-item'> 
-    <a href="{{route('portafolio.search.work',$cat->categoryWork_slug ?? '')}}" class=" nav-link {{ $class_active }}">
-      {{ $cat->categoryWork_name === 'PEN' ? 'PENS' : $cat->categoryWork_name }}
+    <a href="{{route('portafolio.search.work',$cat_slug ?? '')}}" class=" nav-link {{ $class_active }}">
+      {{ $cat === 'PEN' ? 'PENS' : $cat }}
     </a>
   </li>
   @endforeach
 </nav>
 </div>
+
